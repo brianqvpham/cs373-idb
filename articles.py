@@ -15,9 +15,23 @@ input_sources = "sources.pickle"
 
 
 
+countries_list = pickle.load( open( "countries.pickle", "rb" ) )
+
+list_of_countries = [c["name"] for c in countries_list]
+
+def get_mentions(des):
+    countries = []
+    if des:
+        for word in des.split():
+            if word in list_of_countries:
+                countries.append(word)
+    return countries
+
+
 if __name__ == "__main__":
     articles = []
     sources = pickle.load(open(input_sources, 'rb'))
+    print(list_of_countries)
     for s in sources:
         # Construct api url to pull articles from
         url = api_link + s["id"]    # Add source id to url
@@ -34,8 +48,14 @@ if __name__ == "__main__":
                 # Iterate through list of returned articles.
                 # Add them to our articles list.
                 article["source"] = s["name"]     # Add source field to article
-                article["country"] = s["country"]    # Add country field to article
                 articles.append(article)
+                countries_mentioned = get_mentions(article["description"])
+                countries_mentioned += get_mentions(article["title"])
+                if countries_mentioned:
+                    article["country"] = countries_mentioned
+                else:
+                    article["country"] = [s["country"]]
+                
         except Exception as e:
             print("Caught exception while requesting articles.")
             print(str(e))
