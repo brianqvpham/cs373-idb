@@ -20,7 +20,7 @@ if __name__ == "__main__":
     sources = pickle.load(open(input_sources, 'rb'))
     for s in sources:
         # Construct api url to pull articles from
-        url = api_link + s    # Add source id to url
+        url = api_link + s["id"]    # Add source id to url
         url = url + "&apiKey=" + api_key    # Add api key to url
        
         try:
@@ -33,7 +33,7 @@ if __name__ == "__main__":
             for article in returned_articles:
                 # Iterate through list of returned articles.
                 # Add them to our articles list.
-                article["source"] = sources[s]     # Add source field to article
+                article["source"] = s["name"]     # Add source field to article
                 articles.append(article)
         except Exception as e:
             print("Caught exception while requesting articles.")

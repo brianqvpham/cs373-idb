@@ -1,6 +1,7 @@
 """
 Requests source ids from api.
-Stores a dict of source-ids to source names in pickle file.
+Sources are dicts with keys mapping to data about sources.
+Source dicts are stored within a list.
 """
 
 import urllib.request
@@ -18,10 +19,7 @@ if __name__ == "__main__":
     string = response.read().decode('utf-8')
     json_obj = json.loads(string)
     source_list = json_obj["sources"]
-    sources = {}
-    for s in source_list:
-        sources[s["id"]] = s["name"]
-    print(sources)
+    print(source_list)
     with open(output_pickle_name, 'wb') as f:
-        pickle.dump(sources, f)
+        pickle.dump(source_list, f)
     
