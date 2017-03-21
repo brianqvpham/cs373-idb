@@ -34,11 +34,13 @@ if __name__ == "__main__":
                 # Iterate through list of returned articles.
                 # Add them to our articles list.
                 article["source"] = s["name"]     # Add source field to article
+                article["country"] = s["country"]    # Add country field to article
                 articles.append(article)
         except Exception as e:
             print("Caught exception while requesting articles.")
             print(str(e))
             break
+    print(articles)
     with open(output_pickle_name, 'wb') as f:
         pickle.dump(articles, f)
     
