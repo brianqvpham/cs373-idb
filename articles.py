@@ -31,7 +31,6 @@ def get_mentions(des):
 if __name__ == "__main__":
     articles = []
     sources = pickle.load(open(input_sources, 'rb'))
-    print(list_of_countries)
     for s in sources:
         # Construct api url to pull articles from
         url = api_link + s["id"]    # Add source id to url
