@@ -94,3 +94,6 @@ status:
 
 test:
 	$(PYTHON) app/tests.py
+
+run:
+	$(PYTHON) app/app.py

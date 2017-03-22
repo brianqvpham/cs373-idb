@@ -1,11 +1,13 @@
-from flask import Flask, Blueprint
+from flask import Flask, Blueprint, render_template
 from models import db
 
 blueprint = Blueprint('blueprint', __name__)
 
 @blueprint.route('/')
-def index():
-    return "Hello World!"
+@blueprint.route('/<page>')
+def index(page='home'):
+    data = {}
+    return render_template('{0}.html'.format(page), **data)
 
 def create_app():
     app = Flask(__name__)
