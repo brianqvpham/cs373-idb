@@ -15,6 +15,9 @@ class Source(db.Model):
     url = db.Column(db.String)
     logoUrl = db.Column(db.String)
 
+    def __repr__(self):
+        return '<Source {0}>'.format(self.name)
+
 class Article(db.Model):
     __tablename__ = 'article'
     id = db.Column(db.Integer, primary_key=True)
@@ -33,7 +36,7 @@ class Country(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
 
-    articles = db.relationship('Country',
+    articles = db.relationship('Article',
             secondary=article_country_table,
             back_populates='countries')
 
