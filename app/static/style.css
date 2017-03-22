@@ -1,42 +1,10 @@
 /*table th span {
     padding: 0px 0px 0px 2px;
 }
-
-.header-centered {
-	text-align: center;
-}
-
 .table-color-row {
 	width: 5%;
 }
-
 .table-id-row {
-<<<<<<< HEAD
-	width: 3%;
-}
-
-.table-name-row {
-	width: 5%;
-}
-
-.table-damage-class-row {
-	width: 10%;
-}
-
-.table-power-points-row {
-	width: 9%;
-}
-
-.table-power-row {
-	width: 6%;
-}
-
-.table-accuracy-row {
-	width: 7%;
-}
-
-
-=======
 	width:3%;
 }*/
 
@@ -79,8 +47,9 @@ tr:nth-child(even) {
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
->>>>>>> a6b640f263890df9afa156ad14ce74966212fdfd
 }
+
+
 
 
 
