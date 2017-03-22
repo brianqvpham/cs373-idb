@@ -1,4 +1,4 @@
-table th span {
+/*table th span {
     padding: 0px 0px 0px 2px;
 }
 
@@ -11,6 +11,7 @@ table th span {
 }
 
 .table-id-row {
+<<<<<<< HEAD
 	width: 3%;
 }
 
@@ -35,6 +36,50 @@ table th span {
 }
 
 
+=======
+	width:3%;
+}*/
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+>>>>>>> a6b640f263890df9afa156ad14ce74966212fdfd
 }
 
 
