@@ -1,4 +1,42 @@
-{% extends "layout.html" %}
+<!-- {% extends "layout.html" %}
 {% block body %}
   <p>This is the articles homepage</p>
-{% endblock %}
+{% endblock %} -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Declare charset and meta ASAP -->
+    <meta charset="utf-8">
+    <meta name="description" content="A  News Website">
+    <title>Articles</title>
+    
+    <!-- Load  CSS  -->
+    <link href="/static/style.css" rel="stylesheet">
+   
+  </head>
+  <body>
+  <script type="text/javascript" src="articles.js"></script>
+
+  	<div class="topnav">
+	  <a href="#home">Home</a>
+	  <a href="#newsorganizations">News Organizations</a>
+	  <a class="active" href="#newsarticles">Articles</a>
+	  <a href="#Countries">Countries</a>
+	  <a href="#about">About</a>
+	</div>
+
+  	<h1 align="center">Articles</h1>
+
+	<table style="width:100%">
+	  <tr>
+	    <th>Title</th>
+	    <th>Published Date</th> 
+	    <th>Author</th>
+	    <th>Country</th>
+	    <th>News Organization</th>
+	  </tr>
+	</table>
+
+  </body>
+</html>
