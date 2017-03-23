@@ -8,6 +8,16 @@ article_country_table = db.Table('article_country',
 )
 
 class Source(db.Model):
+    """
+    News source model
+
+    name Name of the source
+    description Description of the source
+    url Url to the source's website
+    logoUrl Url to the source's logo
+    articles List of articles belonging to this source
+    country Country this source normally reports on
+    """
     __tablename__ = 'source'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
@@ -23,6 +33,18 @@ class Source(db.Model):
         return '<Source {0}>'.format(self.country)
 
 class Article(db.Model):
+    """
+    News article
+
+    title Title of article
+    author Author of article
+    description Description of article
+    publishDate Date article was published
+    url Url to article
+    imageUrl Url of image associated with article
+    source Source of the article
+    countries Countries the article is about
+    """
     __tablename__ = 'article'
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
@@ -43,6 +65,18 @@ class Article(db.Model):
         return '<Article {0}>'.format(self.title)
 
 class Country(db.Model):
+    """
+    Country
+
+    name Name of country
+    capital Capital of country
+    region Area of the world the country is in
+    population Population of country
+    flagUrl Url to image of the country's flag
+    articles Articles involving the country
+    sources Sources that report on the country
+
+    """
     __tablename__ = 'country'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
