@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, render_template
 from models import db
 from blueprints.articles import articles_bp
-from blueprints.sources import sources_bp
+from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
 
 blueprint = Blueprint('blueprint', __name__)
@@ -20,7 +20,7 @@ def create_app():
     app = Flask(__name__)
     app.register_blueprint(blueprint)
     app.register_blueprint(articles_bp)
-    app.register_blueprint(sources_bp)
+    app.register_blueprint(organizations_bp)
     app.register_blueprint(countries_bp)
     db.init_app(app)
     return app
