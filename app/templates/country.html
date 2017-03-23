@@ -4,7 +4,7 @@
     <!-- Declare charset and meta ASAP -->
     <meta charset="utf-8">
     <meta name="description" content="A  News Website">
-    <title>Countries</title>
+    <title>Country - {{ country.title }}</title>
 
     <!-- Load  CSS  -->
     <!-- <link href="/static/articles.css" rel="stylesheet"> -->
@@ -15,7 +15,6 @@
 
   </head>
   <body background="../static/img/oldpaper.jpg">
-  <script type="text/javascript" src="articles.js"></script>
 
   	<nav class="navbar navbar-inverse">
 	  <div class="container-fluid">
@@ -24,37 +23,47 @@
 	    </div>
 	    <ul class="nav navbar-nav navbar-right">
 	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li><a href="/articles/"> Articles</a></li>
-	      <li class="active"><a href="/countries/"> Countries</a></li>
+	      <li class="active"><a href="/articles/"> Articles</a></li>
+	      <li><a href="/countries/"> Countries</a></li>
 	      <li><a href="/about/"> About</a></li>
 	    </ul>
 	  </div>
 	</nav>
 
-  	<h1 align="center">Countries</h1>
+  	<h1 align="center">Country</h1>
 
   	<table class="table table-hover">
-	    <thead>
-	      <tr>
-		    <th>Name</th>
-		    <th>Capital</th>
-		    <th>Region</th>
-		    <th>Population</th>
-		    <th>Flag</th>
-		  </tr>
-	    </thead>
 	    <tbody>
-	      {% for item in countries %}
 	      	<tr>
-                <td><a href="/countries/{{item.id}}">{{item.name}}</a></td>
-	      		<td>{{item.capital}}</td>
-	      		<td>{{item.region}}</td>
-	      		<td>{{item.population}}</td>
-	      		<td><center><img height="50" src="{{item.flagUrl}}"></center></td>
+                <td>Name</td>
+	      		<td>{{country.name}}</td>
 	      	</tr>
-	      {% endfor %}
+	      	<tr>
+                <td>Capital</td>
+	      		<td>{{country.capital}}</td>
+	      	</tr>
+                <td>Region</td>
+	      		<td>{{country.region}}</td>
+	      	<tr>
+                <td>Population</td>
+	      		<td>{{country.population}}</td>
+            </tr>
+	      	<tr>
+                <td>Articles</td>
+                <td>
+                    {% for a in articles %}
+                        <a href="/articles/{{a.id}}">
+                            {{a.title}}
+                            <br>
+                        </a>
+                    {% endfor %}
+                </td>
+            </tr>
+	      	<tr>
+                <td>Flag</td>
+                <td><img src="{{country.flagUrl}}"/></td>
+            </tr>
 	    </tbody>
 	  </table>
-
   </body>
 </html>

@@ -4,7 +4,7 @@
     <!-- Declare charset and meta ASAP -->
     <meta charset="utf-8">
     <meta name="description" content="A  News Website">
-    <title>Countries</title>
+    <title>Article - {{ article.title }}</title>
 
     <!-- Load  CSS  -->
     <!-- <link href="/static/articles.css" rel="stylesheet"> -->
@@ -24,37 +24,32 @@
 	    </div>
 	    <ul class="nav navbar-nav navbar-right">
 	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li><a href="/articles/"> Articles</a></li>
-	      <li class="active"><a href="/countries/"> Countries</a></li>
+	      <li class="active"><a href="/articles/"> Articles</a></li>
+	      <li><a href="/countries/"> Countries</a></li>
 	      <li><a href="/about/"> About</a></li>
 	    </ul>
 	  </div>
 	</nav>
 
-  	<h1 align="center">Countries</h1>
+  	<h1 align="center">Article</h1>
 
   	<table class="table table-hover">
-	    <thead>
-	      <tr>
-		    <th>Name</th>
-		    <th>Capital</th>
-		    <th>Region</th>
-		    <th>Population</th>
-		    <th>Flag</th>
-		  </tr>
-	    </thead>
 	    <tbody>
-	      {% for item in countries %}
 	      	<tr>
-                <td><a href="/countries/{{item.id}}">{{item.name}}</a></td>
-	      		<td>{{item.capital}}</td>
-	      		<td>{{item.region}}</td>
-	      		<td>{{item.population}}</td>
-	      		<td><center><img height="50" src="{{item.flagUrl}}"></center></td>
+                <td>Title</td>
+	      		<td>{{article.title}}</td>
 	      	</tr>
-	      {% endfor %}
+	      	<tr>
+                <td>Description</td>
+	      		<td>{{article.description}}</td>
+	      	</tr>
+                <td>Author</td>
+	      		<td>{{article.author}}</td>
+	      	<tr>
+                <td>Publish Date</td>
+	      		<td>{{article.publishDate}}</td>
+            </tr>
 	    </tbody>
 	  </table>
-
   </body>
 </html>
