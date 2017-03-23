@@ -5,7 +5,7 @@ organizations_bp = Blueprint('organizations', __name__,)
 
 @organizations_bp.route('/organizations/', defaults={'page' :'organizations'})
 @organizations_bp.route('/organizations/<page>')
-def show_source(page):
+def show_org(page):
     if page == 'organizations':
         return render_template('%s.html' % page)
     else:
