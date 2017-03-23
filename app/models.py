@@ -75,7 +75,6 @@ class Country(db.Model):
     flagUrl Url to image of the country's flag
     articles Articles involving the country
     sources Sources that report on the country
-
     """
     __tablename__ = 'country'
     id = db.Column(db.Integer, primary_key=True)
