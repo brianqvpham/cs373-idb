@@ -42,10 +42,10 @@ default: scrub models.html test IDB1.log check
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
-models.html:
-	$(PYDOC) -w IDB
+html:
+	python -m pydoc -w app/models.py
 
-IDB1.log:
+log:
 	git log > IDB1.log
 
 check:
@@ -82,7 +82,7 @@ format:
 
 scrub:
 	make clean
-	rm -f  IDB.html
+	rm -f  models.html
 	rm -f  IDB1.log
 
 status:
