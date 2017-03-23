@@ -6,6 +6,7 @@ ctx = create_app()
 ctx.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 ctx.app_context().push()
 
+
 class Tests(TestCase):
     def setUp(self):
         db.drop_all()
