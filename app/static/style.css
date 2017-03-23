@@ -24,6 +24,16 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+
+
+.panel-instance {
+	width:50%;
+	margin: 0 auto;
+	margin-bottom:2%;
+}
+
+
+
 .topnav {
   overflow: hidden;
   background-color: #333;
