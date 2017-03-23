@@ -3,6 +3,7 @@ from models import db
 from blueprints.articles import articles_bp
 from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
+from blueprints.static_data import static_data
 
 blueprint = Blueprint('blueprint', __name__)
 
@@ -27,5 +28,5 @@ def create_app():
 
 if __name__ == "__main__":
     app = create_app()
-    app.run()
+    app.run(debug=True)
 

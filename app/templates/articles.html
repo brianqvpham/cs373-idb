@@ -38,12 +38,19 @@
 	      <tr>
 		    <th>Title</th>
 		    <th>Description</th>
-		    <th>Published Date</th> 
 		    <th>Author</th>
+		    <th>Published Date</th> 
 		  </tr>
 	    </thead>
 	    <tbody>
-	      
+	      {% for item in sources %}
+	      	<tr>
+	      		<td>{{item.title}}</td>
+	      		<td>{{item.description}}</td>
+	      		<td>{{item.author}}</td>
+	      		<td>{{item.publishDate}}</td>
+	      	</tr>
+	      {% endfor %}
 	    </tbody>
 	  </table>
 

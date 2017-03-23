@@ -44,7 +44,15 @@
 		  </tr>
 	    </thead>
 	    <tbody>
-	      
+	      {% for item in sources %}
+	      	<tr>
+	      		<td>{{item.name}}</td>
+	      		<td>{{item.capital}}</td>
+	      		<td>{{item.region}}</td>
+	      		<td>{{item.population}}</td>
+	      		<td><center><img height="50" src="{{item.flagUrl}}"></center></td>
+	      	</tr>
+	      {% endfor %}
 	    </tbody>
 	  </table>
 

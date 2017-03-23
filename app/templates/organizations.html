@@ -43,7 +43,14 @@
 		  </tr>
 	    </thead>
 	    <tbody>
-	      
+	      {% for item in sources %}
+	      	<tr>
+	      		<td>{{item.name}}</td>
+	      		<td>{{item.description}}</td>
+	      		<td><a href="{{item.url}}">{{item.url}}</td>
+	      		<td><center><img height="50" src="{{item.logoUrl}}"></center></td>
+	      	</tr>
+	      {% endfor %}
 	    </tbody>
 	  </table>
 
