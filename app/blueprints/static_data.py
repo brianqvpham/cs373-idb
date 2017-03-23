@@ -16,7 +16,6 @@ static_data = {
             "name": "Engadget",
             "description": "Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics.",
             "url": "https://www.engadget.com",
-            "country": "us",
             "logoUrl": "http://i.newsapi.org/engadget-l.png",
         },
         {
@@ -26,7 +25,6 @@ static_data = {
             "name": "Polygon",
             "description": "Polygon is a gaming website in partnership with Vox Media. Our culture focused site covers games, their creators, the fans, trending stories and entertainment news.",
             "url": "http://www.polygon.com",
-            "country": "us",
             "logoUrl": "http://i.newsapi.org/polygon-l.png"
         }
     ],
