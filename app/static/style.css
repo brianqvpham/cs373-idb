@@ -32,7 +32,9 @@ tr:nth-child(even) {
 	margin-bottom:2%;
 }
 
-
+.instance-text {
+	text-align:center;
+}
 
 .topnav {
   overflow: hidden;
