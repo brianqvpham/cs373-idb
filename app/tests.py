@@ -7,7 +7,9 @@ ctx.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
 ctx.app_context().push()
 db.create_all()
 
+
 class Tests(TestCase):
+
     def test_source_1(self):
         s = Source(name='Source1')
         self.assertEqual(s.name, 'Source1')
