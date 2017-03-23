@@ -19,10 +19,11 @@ class Source(db.Model):
     logoUrl = db.Column(db.String)
 
     articles = db.relationship('Article')
-    country = db.Column(db.Integer, db.ForeignKey('country.id'))
+    country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
+    country = db.relationship('Country', back_populates='sources')
 
     def __repr__(self):
-        return '<Source {0}>'.format(self.name)
+        return '<Source {0}>'.format(self.country)
 
 
 class Article(db.Model):
@@ -34,7 +35,9 @@ class Article(db.Model):
     url = db.Column(db.String)
     imageUrl = db.Column(db.String)
 
-    source = db.Column(db.Integer, db.ForeignKey('source.id'))
+    source_id = db.Column(db.Integer, db.ForeignKey('source.id'))
+    source = db.relationship('Source', back_populates='articles')
+
     countries = db.relationship('Country',
                                 secondary=article_country_table,
                                 back_populates='articles')
@@ -56,7 +59,7 @@ class Country(db.Model):
                                secondary=article_country_table,
                                back_populates='countries')
 
-    source = db.relationship('Source')
+    sources = db.relationship('Source', back_populates='country')
 
     def __repr__(self):
         return '<Country {0}>'.format(self.name)

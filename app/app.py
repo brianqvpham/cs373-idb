@@ -8,11 +8,13 @@ blueprint = Blueprint('blueprint', __name__)
 
 
 @blueprint.route('/')
-#@blueprint.route('/<page>')
-def index(page='home'):
+def index():
     data = {}
-    return render_template('{0}.html'.format(page), **data)
+    return render_template('home.html', **data)
 
+@blueprint.route('/about/')
+def about():
+    return render_template('about.html')    
 
 def create_app():
     app = Flask(__name__)
