@@ -38,7 +38,7 @@ else                                   # UTCS
 endif
 
 
-default: scrub models.html test IDB1.log check
+default: scrub html test IDB1.log check
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
