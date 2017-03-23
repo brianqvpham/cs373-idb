@@ -24,6 +24,21 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+.about-team-member {
+	width: 25%;
+	height: 100%;
+	display: inline-block;
+    float: none;
+}
+
+.img-circle {
+	width: 90%;
+}
+
+.row.match-my-cols {
+    overflow: hidden; 
+}
+
 
 
 .panel-instance {
