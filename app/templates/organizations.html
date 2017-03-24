@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="description" content="A  News Website">
     <title>Organizations</title>
-    
+
     <!-- Load  CSS  -->
     <!-- <link href="/static/articles.css" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+
   </head>
   <body background="../static/img/oldpaper.jpg">
   <script type="text/javascript" src="articles.js"></script>
@@ -37,15 +37,15 @@
 	    <thead>
 	      <tr>
 		    <th>Name</th>
-		    <th>Description</th> 
+		    <th>Description</th>
 		    <th>Website</th>
 		    <th>Logo</th>
 		  </tr>
 	    </thead>
 	    <tbody>
-	      {% for item in sources %}
+	      {% for item in organizations %}
 	      	<tr>
-	      		<td>{{item.name}}</td>
+                <td><a href="/organizations/{{item.id}}">{{item.name}}</td>
 	      		<td>{{item.description}}</td>
 	      		<td><a href="{{item.url}}">{{item.url}}</td>
 	      		<td><center><img height="50" src="{{item.logoUrl}}"></center></td>

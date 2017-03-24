@@ -60,6 +60,17 @@
                 </td>
             </tr>
 	      	<tr>
+                <td>Sources</td>
+                <td>
+                    {% for s in sources %}
+                        <a href="/organizations/{{s.id}}">
+                            {{s.name}}
+                            <br>
+                        </a>
+                    {% endfor %}
+                </td>
+            </tr>
+	      	<tr>
                 <td>Flag</td>
                 <td><img src="{{country.flagUrl}}"/></td>
             </tr>

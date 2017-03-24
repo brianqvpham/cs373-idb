@@ -32,7 +32,7 @@ static_data = {
         {
             "id": "cnn1",
             "source": "cnn",
-            "country": "us",
+            "countries": ["us"],
             "author": "Pamela Brown, Evan Perez and Shimon Prokupecz, CNN",
             "title": "US Officials: Info suggests Trump associates may have coordinated with Russians",
             "description": "The FBI has information that indicates associates of President Donald Trump communicated with suspected Russian operatives to possibly coordinate the release of information damaging to Hillary Clinton's campaign, US officials told CNN.",
@@ -43,7 +43,7 @@ static_data = {
         {
             "id": "engadget1",
             "source": "engadget",
-            "country": "us",
+            "countries": ["us"],
             "author": "Jon Fingas",
             "title": "Apple acquisition hints at deep automation in iOS",
             "description": "Workflow can perform many tasks with a single tap.",
@@ -54,7 +54,7 @@ static_data = {
         {
             "id": "polygon1",
             "source": "polygon",
-            "country": "us",
+            "countries": ["us"],
             "author": "Samit Sarkar",
             "title": "Red Dead Redemption being brought to PC — inside Grand Theft Auto 5",
             "description": "Good luck with the horses",
