@@ -12,6 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+
+    <!-- Latest compiled and minified Locales -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
 
   </head>
   <body background="../static/img/oldpaper.jpg">
@@ -32,13 +40,17 @@
 
   	<h1 align="center">News Organizations</h1>
 
-  	<table class="table table-hover">
+  	<table class="table table-hover"  data-toggle="table" data-sort-name="name" data-sort-order="asc">
 	    <thead>
 	      <tr>
-		    <th>Name</th>
-		    <th>Description</th>
-		    <th>Website</th>
-		    <th>Logo</th>
+		    <th data-field="name" data-sortable="true">
+                Name</th>
+		    <th data-field="descr" data-sortable="true">
+                Description</th>
+		    <th data-field="url" data-sortable="true">
+                Website</th>
+		    <th data-field="logo" >
+                Logo</th>
 		  </tr>
 	    </thead>
 	    <tbody>
