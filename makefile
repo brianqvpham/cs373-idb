@@ -5,6 +5,8 @@ FILES :=                              \
 	apiary.apib \
 	.travis.yml \
     models.html \
+	makefile \
+	.gitignore \
 	UML.pdf
 
 ifeq ($(shell uname), Darwin)          # Apple
