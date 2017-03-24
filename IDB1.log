@@ -1,0 +1,589 @@
+commit 09e7c8760c20aebda6f9aedd3096eec670272abf
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 21:22:08 2017 -0500
+
+    Updated aggregate stats
+
+commit d0dd1ac562d7e400cad52e7a9afcb907948cc840
+Merge: 124d4e9 eda25c4
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 21:13:44 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 124d4e9d03c4d2bc1c3e76260dbd2273bc16a077
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 21:13:39 2017 -0500
+
+    update makefile
+
+commit eda25c483bbf7fd86f0bfd72b94dc02b218f71f7
+Merge: bacf3a6 76ad64a
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 21:11:20 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit bacf3a620b599ef9ab0f209c7da50c0637472b20
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 21:11:05 2017 -0500
+
+    update team stats
+
+commit 76ad64a0aecacfbb8dc910d64317d5a8bdac21e5
+Merge: 695d637 b801d32
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Mar 23 21:10:15 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 695d637b71cfada288bbf815894f138c33c87188
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Mar 23 21:10:00 2017 -0500
+
+    updated stats
+
+commit b801d324d7a1be8d5047a07bffb3b43e4ef24987
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 20:49:38 2017 -0500
+
+    about update
+
+commit 9a714d2a888b42c9a0f7b8e66f26b2e72aff9932
+Merge: 88910b3 936ac35
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 20:32:56 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 88910b39437a3ce03dcf02e280074681a45dfdfc
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 20:32:54 2017 -0500
+
+    Makefile change
+
+commit 936ac35f8a38538bed54b3f8e56ea88b55e9de13
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 20:32:30 2017 -0500
+
+    finished about page
+
+commit 48a10df72ab5e914dd72ad0286b40d2cf64877da
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 20:32:00 2017 -0500
+
+    Sortable tables
+
+commit 42478e30357a7df3b22879f3de034ffced42b452
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 20:08:24 2017 -0500
+
+    Changed make html to use python3
+
+commit 08d60ea0540f66e4f45b0c9cff47a17f78836df5
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 20:00:41 2017 -0500
+
+    Fix broken link
+
+commit b8b4623c5430b2311773c9bdf05fb9e8b87c9e0f
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 19:31:32 2017 -0500
+
+    Remove prints
+
+commit 391fef142e1d37d8691baff5ea28ac90910a710e
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 19:29:25 2017 -0500
+
+    Add URL to article page
+
+commit 89c96d4dd01fd0f9463c6d9f8438a174abfc478a
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 19:15:48 2017 -0500
+
+    remove bad script tags
+
+commit b9be38645821a60e8fa4e36ccd942ffc6e54d6ea
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 19:14:39 2017 -0500
+
+    Instance pages
+
+commit 49b71d09e36e84f39e777e397dea4362fbc8b983
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 18:49:29 2017 -0500
+
+    A bunch of template stuff
+
+commit eeaaf113ebc10639be92c1b9d5629da874989769
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 18:33:38 2017 -0500
+
+    Added Brian about info.
+
+commit a662a9eab0cc491d3baab8191bb5f9f3fbbbda3a
+Merge: 94dd032 4428be9
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Thu Mar 23 17:41:10 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 94dd032bd78300b0eb549958617dd31c79365253
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Thu Mar 23 17:40:21 2017 -0500
+
+    Add data to tables on html page
+
+commit 4428be99996b5c35383d4331f0ef437c0ede7056
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 17:33:19 2017 -0500
+
+    Added my about stuff
+
+commit a8f2ee9b691d601a7c9fb0e4cb6280394bae9913
+Merge: 8f63f40 8a80a0b
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 16:42:40 2017 -0500
+
+    Merge branch 'dev' of github.com:brianqvpham/cs373-idb into dev
+
+commit 8f63f40b980348a57bba1ace2ae4b9c5b24d6ea7
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 16:42:30 2017 -0500
+
+    Fixed issue with articles and countries pages not showing.
+
+commit 8a80a0b8f49882b9560f911bf43963e2012c0df5
+Author: jaimemunz <jaimemunoz@utexas.edu>
+Date:   Thu Mar 23 16:37:20 2017 -0500
+
+    updated my info in the bio
+
+commit 284e0f1d1904e2a564e27a851ea846ab92807aeb
+Author: jaimemunz <jaimemunoz@utexas.edu>
+Date:   Thu Mar 23 16:25:38 2017 -0500
+
+    Add files via upload
+
+commit 83cb74b9d842df5d32aa6914b01b29a1bdfa3753
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Thu Mar 23 16:24:16 2017 -0500
+
+    added bio in about and deleted extra templates directory
+
+commit 76db48fc479f0ee332eea390cded9f78ab748904
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 15:13:21 2017 -0500
+
+    Linking apiary to repo
+
+commit 95a406b504bba438bb5461f911da158edc70ced7
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 14:42:39 2017 -0500
+
+    Fixed make log in makefile.
+
+commit a8719c05cbefe25f3664b6244986e1f3de910001
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 14:38:16 2017 -0500
+
+    Fixed makefile for TravisCI
+
+commit 0f82a1d5e27fb843ca3684a7ad8e3c2937bc76cd
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 14:36:31 2017 -0500
+
+    Created models.html and modified makefile.
+
+commit 38d5bdc8ad94b99048721b8cd3a957d8e6bbb852
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 14:34:30 2017 -0500
+
+    home page update
+
+commit 28829e8fb70efe48f3b9137477038eaec81353aa
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 12:15:34 2017 -0500
+
+    Changed api paths in api documentation
+
+commit 2b677d755c8ef048bb9a890a5f32588828cbdf4b
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 11:42:43 2017 -0500
+
+    footer
+
+commit 3d11280c5d404d9f34dda8ee6d6ce27ba2a0ae99
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 11:35:33 2017 -0500
+
+    Fixed requirements.txt for TravisCI
+
+commit 48aa2feb90da624db2b8488421f5ad3706d087a4
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 11:33:37 2017 -0500
+
+    about page update
+
+commit e9750ecc41b3de8af93eb0123031aeca12b93250
+Merge: 68f863b 9de64d7
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 11:31:38 2017 -0500
+
+    about page update
+
+commit 68f863b2b13032618d40bcc9a3ae1ee8f189762e
+Author: Pikachu94 <paolajara@wireless-10-147-91-196.public.utexas.edu>
+Date:   Thu Mar 23 11:31:20 2017 -0500
+
+    about page update
+
+commit 9de64d7cfc39cff6d81fc6476cb1d8f07106a1e4
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 11:29:24 2017 -0500
+
+    Changed sources to organization and fixed hrefs in templates.
+
+commit 364775978979fbddcb4326a9b6630020cd5df01b
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 11:07:11 2017 -0500
+
+    Updated requirements.txt
+
+commit ec8a53a56a434ebdf27627b4c6ae538d5c86d6b2
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 10:58:13 2017 -0500
+
+    Removed duplicate fields in static data
+
+commit d6c9c73f52f85a25314c3d12018600d6b19f7a00
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 10:54:58 2017 -0500
+
+    Edited apiary API
+
+commit a912fda6f347f7a05e312ace528ca30eb9572096
+Merge: e98bda0 5b7a37c
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 10:50:26 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit e98bda0907169ae5fdd69d078357933febc10347
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 10:50:16 2017 -0500
+
+    MOve static_data to own module
+
+commit 5b7a37c357b12e5ece2a29faba0a0369bca8c090
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Mar 23 10:49:15 2017 -0500
+
+    Added apiary.apib
+
+commit 9d76fbcd25e26a4e3c092849227593bad1c24c83
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Mar 23 01:19:23 2017 -0500
+
+    css setup
+
+commit 6c9a1a20ee5832d10852f1adaced707145254d20
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Mar 23 01:17:25 2017 -0500
+
+    about  page progress
+
+commit e8bb194a7ca811c4c2de84508a65d3f07e357cdb
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Mar 23 01:16:21 2017 -0500
+
+    home page progress
+
+commit 822b7af7b18b79d235d346a57e3b202c60171e54
+Merge: a6edaed 3e5e15e
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Mar 23 01:14:42 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit a6edaed062899e1fcbaee88d85a9e8e4dcc6d02c
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Mar 23 01:14:32 2017 -0500
+
+    home and about page progress
+
+commit 3e5e15e6a88f0dd4c0d229b25aa22fefbc88353d
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Mar 23 01:11:37 2017 -0500
+
+    Models docs
+
+commit 8f07c63c282609777a22976cc01b872318b5eedb
+Merge: 68e85c8 269dbcf
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 23:16:17 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 68e85c82662666e8abc102f3d8bf75e1b312baf2
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 23:14:16 2017 -0500
+
+    Static data
+
+commit 269dbcf970cf2b9cb429ae1dcab9aae1257fbb27
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-144-115.public.utexas.edu>
+Date:   Wed Mar 22 22:46:53 2017 -0500
+
+    added news organization page and website name
+
+commit 8eb39212b8ac24666da2c356403ed662a5bac5c3
+Author: Pikachu94 <paolajara@wireless-10-145-255-95.public.utexas.edu>
+Date:   Wed Mar 22 22:01:57 2017 -0500
+
+    init home page
+
+commit 9e3bc2fc2989940590c66d9ed9329991edbdfcf2
+Merge: 254cc56 a9464b8
+Author: Pikachu94 <paolajara@wireless-10-145-255-95.public.utexas.edu>
+Date:   Wed Mar 22 21:57:19 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 254cc56fba91acad8f737e0bcfd4fb5a531dd5d6
+Author: Pikachu94 <paolajara@wireless-10-145-255-95.public.utexas.edu>
+Date:   Wed Mar 22 21:54:18 2017 -0500
+
+    home page
+
+commit a9464b8ebbe1ed1cf4cea4384d7991e742d71a1b
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Mar 22 21:49:33 2017 -0500
+
+    Defined routes for home page and about page.
+
+commit c867195e504725c32b57d3ca8368b4c1aa93d5cc
+Merge: 5f0c5f3 f47fb55
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 21:43:53 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 5f0c5f31295c2b5cd2a3c695384c4fb03555dcd3
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 21:42:52 2017 -0500
+
+    More models tests
+
+commit f47fb55929fb5c345046d8cce2a7b894a26cb77f
+Author: Pikachu94 <paolajara@wireless-10-145-255-95.public.utexas.edu>
+Date:   Wed Mar 22 21:31:35 2017 -0500
+
+    setup
+
+commit 5e0d301254bd57639de75bfaef66cbab8e310f2f
+Merge: 75da372 cf05b51
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-144-115.public.utexas.edu>
+Date:   Wed Mar 22 21:15:53 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 75da3728916c68abf69a62ec78338b723010624e
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-144-115.public.utexas.edu>
+Date:   Wed Mar 22 21:15:44 2017 -0500
+
+    working navigation bar
+
+commit cf05b51623047e5af1911ee9b5e380a42d2a1c49
+Merge: 6c85205 55b3b3d
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 21:08:49 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 6c8520575bf80caff631f106665116c393252a2d
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 21:08:46 2017 -0500
+
+    Travis install requirements
+
+commit 55b3b3d55a85a8eadeafe04eb63f0a87c62abf58
+Merge: 560e182 d36d702
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-144-115.public.utexas.edu>
+Date:   Wed Mar 22 21:00:04 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 560e182b6fef054908620184efe86986304c2471
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-144-115.public.utexas.edu>
+Date:   Wed Mar 22 20:59:39 2017 -0500
+
+    pdf of UML diagram
+
+commit d36d702cc1186eda8f93597162baf06379e51a19
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Mar 22 20:48:22 2017 -0500
+
+    Added sources and countries blueprints.
+
+commit 5eee02cb62dc0adc5f34662553ae5d47d73097ff
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Mar 22 20:34:54 2017 -0500
+
+    Added articles blueprint.
+
+commit cc349711cf90a90678407957b87bda74ff832d9a
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 20:19:01 2017 -0500
+
+    Model unit tests
+
+commit 5a0d1502daddc047f35b920d9d6ad135535b9d77
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 19:33:36 2017 -0500
+
+    make ssh
+
+commit 57c3b492bd0cf9c96d24ec4159c5082c9299e579
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 19:27:10 2017 -0500
+
+    More model relationships
+
+commit a00f3ca6f6b23324ab1a020aaac37ba259775043
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Mar 22 18:31:10 2017 -0500
+
+    Serve templates, make run, move imgs to static/imgs
+
+commit 72bf530d217f5e365668c38457701228e2ba5054
+Author: Nikita Zamwar <nikitazamwar@Nikitas-MacBook-Air.local>
+Date:   Wed Mar 22 17:19:06 2017 -0500
+
+    Added background image and countries page
+
+commit bf28e8ef60d5956c8fe4c03b6cad01532236db77
+Author: Nikita Zamwar <nikitazamwar@Nikitas-MacBook-Air.local>
+Date:   Wed Mar 22 12:29:14 2017 -0500
+
+    Added bootstrap navbar to articles
+
+commit 5804060bcf8a440f4d22340e3ab26aeb0afab08a
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Tue Mar 21 23:55:01 2017 -0500
+
+    about template
+
+commit fa88d200e6b48578b3358a58ca3d69f64ec21245
+Merge: 102fe35 a6b640f
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Tue Mar 21 23:49:31 2017 -0500
+
+    working on templates
+
+commit 102fe35dbda5ff5f049c78fd101ba2e50c4cab94
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Tue Mar 21 23:48:53 2017 -0500
+
+    working on templates
+
+commit a6b640f263890df9afa156ad14ce74966212fdfd
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 23:16:25 2017 -0500
+
+    More initdb.py stuff
+
+commit 812e4457bc22097a96393e4fea04140ba43906e9
+Merge: dee5350 23f9b9f
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 22:48:32 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit dee53508f426f04bb42d234986d7aef5652a29c2
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 22:48:27 2017 -0500
+
+    Modularize app, create initdb script
+
+commit 23f9b9fa02c352553709a30223a9bf33fd270c8e
+Merge: 8bb1d16 e2c4af8
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Tue Mar 21 22:45:46 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 8bb1d16ed57048e32330f8c6eea9c9bf62f0c302
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Tue Mar 21 22:45:14 2017 -0500
+
+    Added js files and table in articlesm
+
+commit e2c4af8d7a4c3f8272e397a7e20083d386c80a66
+Merge: e07d795 7382f64
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 21:30:07 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit e07d795dcf658f7b29a305b0828cbdd4cbe6ab37
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 21:27:48 2017 -0500
+
+    requirements.txt
+
+commit 854a7f9655879be0cd29d8bd82710a7c43e79ee3
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 21:27:39 2017 -0500
+
+    initial .gitignore
+
+commit 648b69356fd094e469503cbdc7ec6f754933162b
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Mar 21 21:27:27 2017 -0500
+
+    Initial /app setup
+
+commit 7382f649617161ecce5e868621885dd2821f8e2e
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Mar 21 20:45:41 2017 -0500
+
+    Added flask application.
+
+commit cfdb707d03d95dc87546b0c22542974cafc9138f
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Tue Mar 21 20:02:44 2017 -0500
+
+    add files for articles and coutries
+
+commit 36d804f606ed1714707f7030da529b45da9e86ae
+Author: Nikita Zamwar <nikitazamwar@wireless-10-147-78-247.public.utexas.edu>
+Date:   Tue Mar 21 18:16:05 2017 -0500
+
+    added uml diagram
+
+commit cef9663e1aca6fdcbc594a08eedc463a04bf4ffd
+Merge: 17f546d 79dd073
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Mon Mar 20 20:05:20 2017 -0500
+
+    Merge branch 'master' into dev
+
+commit 79dd073e16b49925be00a703ab392e1cb1bea10a
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Mon Mar 20 20:04:09 2017 -0500
+
+    Initial setup
+
+commit 17f546d6c0cadcb4b857b9da9059e64d28d11722
+Author: Pikachu94 <paolajara@wireless-10-145-255-95.public.utexas.edu>
+Date:   Mon Mar 20 19:45:16 2017 -0500
+
+    start of website template
+
+commit 668fce4e191d549d3a80e2a6c63c8baa2686875f
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Mar 7 17:56:03 2017 -0600
+
+    Initial commit
