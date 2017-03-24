@@ -43,7 +43,7 @@ default: scrub html test log check
 	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
 
 html:
-	python -m pydoc -w app/models.py
+	$(PYTHON) -m pydoc -w app/models.py
 
 log:
 	git log > IDB1.log
