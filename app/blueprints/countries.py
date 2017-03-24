@@ -10,7 +10,6 @@ def show_country(id=None):
         data = static_data['countries']
         return render_template('countries.html', countries=data)
     else:
-        # Find correct country in countrys list
         country = list(filter(lambda x: x["id"] == id, static_data['countries']))[0]
         articles = list(filter(lambda x: x["id"] in country['articles'], static_data['articles']))
         sources = list(filter(lambda x: x["id"] in country['sources'], static_data['sources']))

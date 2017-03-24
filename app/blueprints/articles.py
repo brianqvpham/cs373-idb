@@ -11,8 +11,6 @@ def show_article(id=None):
         data = static_data['articles']
         return render_template('articles.html', articles=data)
     else:
-        # Find correct country in countrys list
-        print(id)
         article = list(filter(lambda x: x["id"] == id, static_data['articles']))[0]
         countries = list(filter(lambda x: x["id"] in article['countries'], static_data['countries']))
         organization = list(filter(lambda x: x["id"] == article['source'], static_data['sources']))[0]
