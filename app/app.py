@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, render_template
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from config import db
+from config import db_string
 from blueprints.articles import articles_bp
 from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
@@ -11,7 +11,7 @@ import os
 import subprocess
 
 
-engine = create_engine(db)
+engine = create_engine(db_string)
 Session = sessionmaker(bind=engine)
 
 blueprint = Blueprint('blueprint', __name__)
