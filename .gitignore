@@ -4,3 +4,6 @@ venv/
 *.swp
 *.pyc
 .DS_Store
+
+# DB config
+config.py
