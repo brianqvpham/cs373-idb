@@ -1,4 +1,5 @@
 from flask import Flask, Blueprint, render_template
+from models import db
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from config import db_string
