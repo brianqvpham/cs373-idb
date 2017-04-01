@@ -1,7 +1,7 @@
 from flask import Flask, Blueprint, render_template
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from config import db_string
+from models import db
 from blueprints.articles import articles_bp
 from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
@@ -9,10 +9,6 @@ from blueprints.static_data import static_data
 
 import os
 import subprocess
-
-
-engine = create_engine(db_string)
-Session = sessionmaker(bind=engine)
 
 blueprint = Blueprint('blueprint', __name__)
 
@@ -30,14 +26,14 @@ def tests():
     test_script = 'tests.py'
     script_dir = os.path.dirname(__file__)
     try:
-        result = subprocess.run(['python3.5', 
+        result = subprocess.run(['python3.5',
                                 os.path.join(script_dir, test_script)],
-                                stdout = subprocess.PIPE, 
+                                stdout = subprocess.PIPE,
                                 stderr=subprocess.STDOUT, check=True).stdout
     except subprocess.CalledProcessError as e:
         result = e.output
     return result.decode('utf-8')
-        
+
 def create_app():
     app = Flask(__name__)
     app.register_blueprint(blueprint)
