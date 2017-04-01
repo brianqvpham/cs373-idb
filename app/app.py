@@ -2,7 +2,6 @@ from flask import Flask, Blueprint, render_template
 from models import db
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models import db
 from blueprints.articles import articles_bp
 from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
