@@ -2,6 +2,8 @@ import urllib.request
 import json
 import pickle
 import os
+import uuid
+
 path = os.path.abspath(__file__)
 dir_path = os.path.dirname(path)
 
@@ -21,7 +23,7 @@ def get_country_mentions(des, countries):
         for word in des.split():
             if word in countries:
                 mentions.append(word)
-    return [find(countries, 'name', c) for c in mentions]
+    return [find(countries, 'name', c)['id'] for c in mentions]
 
 def get_countries():
     source = "https://restcountries.eu/rest/v2/all" # Put source link here
@@ -75,7 +77,8 @@ def get_articles(countries, orgs):
                 if countries_mentioned:
                     article["countries"] = countries_mentioned
                 else:
-                    article["countries"] = o['country_id']
+                    article["countries"] = [o['country_id']]
+                article['id'] = str(uuid.uuid1())
 
         except Exception as e:
             print("Caught exception while requesting articles.")
