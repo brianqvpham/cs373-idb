@@ -102,3 +102,6 @@ run:
 
 ssh:
 	ssh -i "idb_project.pem" ubuntu@newsr.me
+
+pickle:
+	$(PYTHON) app/data/generate.py

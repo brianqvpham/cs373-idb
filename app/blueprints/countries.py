@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, jsonify
 from blueprints.static_data import static_data
+from repo import repo
 
 countries_bp = Blueprint('countries', __name__,)
 
@@ -14,3 +15,7 @@ def show_country(id=None):
         articles = list(filter(lambda x: x["id"] in country['articles'], static_data['articles']))
         sources = list(filter(lambda x: x["id"] in country['sources'], static_data['sources']))
         return render_template('country.html', country=country, articles=articles, sources=sources)
+
+@countries_bp.route('/api/countries/')
+def get_countries():
+    return jsonify(repo.get_countries())

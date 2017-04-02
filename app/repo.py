@@ -3,12 +3,17 @@ import os
 
 class PickleRepo():
     def __init__(self):
-        self.pickle_folder = os.path.dirname(__file__) + '/data'
+        self.pickle_file = os.path.dirname(__file__) + '/data/data.pickle'
 
     def get_articles(self):
-        articles = pickle.load(open(self.pickle_folder + '/articles.pickle', 'rb'))
-        print(articles)
-        return articles
+        return pickle.load(open(self.pickle_file, 'rb'))['articles']
+
+    def get_organizations(self):
+        return pickle.load(open(self.pickle_file, 'rb'))['organizations']
+
+    def get_countries(self):
+        return pickle.load(open(self.pickle_file, 'rb'))['countries']
+
 
 repo = PickleRepo()
 

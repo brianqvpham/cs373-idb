@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, jsonify
 from blueprints.static_data import static_data
+from repo import repo
 
 organizations_bp = Blueprint('organizations', __name__,)
 
@@ -14,3 +15,7 @@ def show_country(id=None):
         articles = list(filter(lambda x: x["id"] in organization['articles'], static_data['articles']))
         country = list(filter(lambda x: x["id"] == organization['country'], static_data['countries']))[0]
         return render_template('organization.html', country=country, articles=articles, organization=organization)
+
+@organizations_bp.route('/api/organizations/')
+def get_organizations():
+    return jsonify(repo.get_organizations())
