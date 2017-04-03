@@ -46,7 +46,7 @@ def get_organizations(countries):
     for o in organizations:
         country_name = country_to_name[o['country']]
         country_id = next((c['id'] for c in countries if c['name'] == country_name), None)
-        o['country_id'] = country_id
+        o['country'] = {"id": country_id}
     return organizations
 
 def get_articles(countries, orgs):
@@ -77,7 +77,7 @@ def get_articles(countries, orgs):
                 if countries_mentioned:
                     article["countries"] = countries_mentioned
                 else:
-                    article["countries"] = [{"id": o['country_id']}]
+                    article["countries"] = [{"id": o['country']['id']}]
                 article['id'] = str(uuid.uuid1())
 
         except Exception as e:
@@ -92,6 +92,17 @@ def main():
     data['countries'] = get_countries()
     data['organizations'] = get_organizations(data['countries'])
     data['articles'] = get_articles(data['countries'], data['organizations'])
+
+    for c in data['countries']:
+        articles = [{"id": x['id']} for x in data['articles'] if any(y['id'] == c['id'] for y in x['countries'])]
+        organizations = [{"id": x['id']} for x in data['organizations'] if x['country']['id'] == c['id']]
+        c['articles'] = articles
+        c['organizations'] = organizations
+
+    for o in data['organizations']:
+        articles = [{"id": x['id']} for x in data['articles'] if x['organization']['id'] == o['id']]
+        o['articles'] = articles
+
     with open(outfile, 'wb') as f:
         pickle.dump(data, f)
 

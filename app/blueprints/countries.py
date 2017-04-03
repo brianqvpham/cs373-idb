@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template, jsonify, request
 from blueprints.static_data import static_data
 from repo import repo
 
@@ -18,4 +18,6 @@ def show_country(id=None):
 
 @countries_bp.route('/api/countries/')
 def get_countries():
-    return jsonify(repo.get_countries())
+    args = request.args.to_dict()
+    args['expand'] = request.args.getlist('expand')
+    return jsonify(repo.get('countries', **args))
