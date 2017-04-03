@@ -23,7 +23,7 @@ def get_country_mentions(des, countries):
         for word in des.split():
             if word in countries:
                 mentions.append(word)
-    return [find(countries, 'name', c)['id'] for c in mentions]
+    return [{"id": find(countries, 'name', c)['id']} for c in mentions]
 
 def get_countries():
     source = "https://restcountries.eu/rest/v2/all" # Put source link here
@@ -68,7 +68,7 @@ def get_articles(countries, orgs):
             for article in returned_articles:
                 # Iterate through list of returned articles.
                 # Add them to our articles list.
-                article["org_id"] = o["id"]     # Add source field to article
+                article["organization"] = {"id": o["id"]}     # Add source field to article
                 articles.append(article)
                 desc = article['description'] if article['description'] else ''
                 title = article['title'] if article['title'] else ''
@@ -77,7 +77,7 @@ def get_articles(countries, orgs):
                 if countries_mentioned:
                     article["countries"] = countries_mentioned
                 else:
-                    article["countries"] = [o['country_id']]
+                    article["countries"] = [{"id": o['country_id']}]
                 article['id'] = str(uuid.uuid1())
 
         except Exception as e:

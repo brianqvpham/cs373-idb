@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, jsonify
+from flask import Blueprint, render_template, jsonify, url_for, request
 from blueprints.static_data import static_data
 from repo import repo
 from util import find
@@ -13,13 +13,17 @@ def show_article(id=None):
         return render_template('articles.html', articles=repo.get_articles())
     else:
         article = repo.get_article(id)
-        print(article)
         organizations = repo.get_organizations()
-        organization = find(organizations, 'id', article['id'])
+        organization = find(organizations, 'id', article['org_id'])
+        print(organization)
         countries = repo.get_countries()
-        country = [find(countries, 'id', country_id) for country_id in article['countries']]
-        return render_template('article.html', article=article, organization=organization)
+        countries = [find(countries, 'id', country_id) for country_id in article['countries']]
+        return render_template('article.html', article=article, organization=organization, countries=countries)
 
 @articles_bp.route('/api/articles/')
 def get_articles():
-    return jsonify(repo.get_articles())
+    args = request.args.to_dict()
+    args['expand'] = request.args.getlist('expand')
+    return jsonify(repo.get('articles', **args))
+
+
