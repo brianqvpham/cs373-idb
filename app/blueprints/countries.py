@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, jsonify, request
 from blueprints.static_data import static_data
-from repo import repo
+from store import store
 
 countries_bp = Blueprint('countries', __name__,)
 
@@ -21,6 +21,4 @@ def show_country(id=None):
 def get_countries(id=None):
     args = request.args.to_dict()
     args['expand'] = request.args.getlist('expand')
-    if (id):
-        args['id'] = id
-    return jsonify(repo.get('countries', **args))
+    return jsonify(store.Country().get(id, **args))
