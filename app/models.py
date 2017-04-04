@@ -18,14 +18,15 @@ class Organization(db.Model):
     articles List of articles belonging to this source
     country Country this source normally reports on
     """
-    __tablename__ = 'source'
+    __tablename__ = 'organization'
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String)
     description = db.Column(db.String)
     url = db.Column(db.String)
     logoUrl = db.Column(db.String)
 
-    articles = db.relationship('Article')
+    articles_id = db.Column(db.Integer, db.ForeignKey('article.id'))
+    articles = db.relationship('Article', back_populates='organization')
     country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
     country = db.relationship('Country', back_populates='organization')
 
@@ -90,7 +91,7 @@ class Country(db.Model):
             secondary=article_country_table,
             back_populates='countries')
 
-    organization = db.relationship('Organizations', back_populates='country')
+    organization = db.relationship('Organization', back_populates='country')
 
 
     def __repr__(self):
