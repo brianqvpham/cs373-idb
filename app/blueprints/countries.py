@@ -17,7 +17,10 @@ def show_country(id=None):
         return render_template('country.html', country=country, articles=articles, sources=sources)
 
 @countries_bp.route('/api/countries/')
-def get_countries():
+@countries_bp.route('/api/countries/<id>')
+def get_countries(id=None):
     args = request.args.to_dict()
     args['expand'] = request.args.getlist('expand')
+    if (id):
+        args['id'] = id
     return jsonify(repo.get('countries', **args))
