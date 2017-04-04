@@ -7,7 +7,7 @@ article_country_table = db.Table('article_country',
         db.Column('country_id', db.Integer, db.ForeignKey('country.id')),
 )
 
-class Source(db.Model):
+class Organization(db.Model):
     """
     News source model
 
@@ -27,10 +27,11 @@ class Source(db.Model):
 
     articles = db.relationship('Article')
     country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
-    country = db.relationship('Country', back_populates='sources')
+    country = db.relationship('Country', back_populates='organization')
+
 
     def __repr__(self):
-        return '<Source {0}>'.format(self.country)
+        return '<Organization {0}>'.format(self.country)
 
 class Article(db.Model):
     """
@@ -42,7 +43,7 @@ class Article(db.Model):
     publishDate Date article was published
     url Url to article
     imageUrl Url of image associated with article
-    source Source of the article
+    organization organization of the article
     countries Countries the article is about
     """
     __tablename__ = 'article'
@@ -54,8 +55,8 @@ class Article(db.Model):
     url = db.Column(db.String)
     imageUrl = db.Column(db.String)
 
-    source_id = db.Column(db.Integer, db.ForeignKey('source.id'))
-    source = db.relationship('Source', back_populates='articles')
+    organization_id = db.Column(db.Integer, db.ForeignKey('organization.id'))
+    organization = db.relationship('Organization', back_populates='articles')
 
     countries = db.relationship('Country',
             secondary=article_country_table,
@@ -63,6 +64,7 @@ class Article(db.Model):
 
     def __repr__(self):
         return '<Article {0}>'.format(self.title)
+
 
 class Country(db.Model):
     """
@@ -74,7 +76,7 @@ class Country(db.Model):
     population Population of country
     flagUrl Url to image of the country's flag
     articles Articles involving the country
-    sources Sources that report on the country
+    organizations organizations that report on the country
     """
     __tablename__ = 'country'
     id = db.Column(db.Integer, primary_key=True)
@@ -88,8 +90,8 @@ class Country(db.Model):
             secondary=article_country_table,
             back_populates='countries')
 
-    sources = db.relationship('Source', back_populates='country')
+    organization = db.relationship('Organizations', back_populates='country')
+
 
     def __repr__(self):
         return '<Country {0}>'.format(self.name)
-
