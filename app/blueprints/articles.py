@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, jsonify, url_for, request
 from blueprints.static_data import static_data
-from repo import repo
+from store import store
 from util import find
 
 articles_bp = Blueprint('articles', __name__,)
@@ -26,8 +26,6 @@ def show_article(id=None):
 def get_articles(id=None):
     args = request.args.to_dict()
     args['expand'] = request.args.getlist('expand')
-    if (id):
-        args['id'] = id
-    return jsonify(repo.get('articles', **args))
+    return jsonify(store.Article().get(id, **args))
 
 
