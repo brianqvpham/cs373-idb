@@ -37,7 +37,7 @@ class Organization(db.Model):
         return '<Organization {0}>'.format(self.country)
 
 class OrganizationSchemaNested(ma.Schema):
-    #articles = fields.Nested('ArticleSchema', only='id')
+    #articles = fields.Nested('ArticleSchema', many=True, only=('id', 'title'))
     country = fields.Nested('CountrySchema', only=('id', 'name'))
     class Meta:
         fields = ('id', 'name', 'description', 'url', 'logoUrl', 'country')
@@ -78,6 +78,15 @@ class Article(db.Model):
     def __repr__(self):
         return '<Article {0}>'.format(self.title)
 
+class ArticleSchemaNested(ma.Schema):
+    organization = fields.Nested('OrganizationSchema', only=('id', 'name'))
+    countries = fields.Nested('CountrySchema', only=('id', 'name'))
+    class Meta:
+        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl', 'organization', 'countries')
+
+class ArticleSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl')
 
 class Country(db.Model):
     """
@@ -114,6 +123,7 @@ class CountrySchema(ma.Schema):
         fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl')
 
 class CountrySchemaNested(ma.Schema):
+    #articles = fields.Nested(ArticleSchema, many=True, only('id', 'title'))
     organizations = fields.Nested(OrganizationSchema, many=True, only=('id', 'name'))
     class Meta:
         fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl', 'organizations')
