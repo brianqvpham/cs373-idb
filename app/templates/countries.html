@@ -1,72 +1,24 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Declare charset and meta ASAP -->
-    <meta charset="utf-8">
-    <meta name="description" content="A  News Website">
-    <title>Countries</title>
+{% extends "model_list.html" %}
 
-    <!-- Load  CSS  -->
-    <!-- <link href="/static/articles.css" rel="stylesheet"> -->
+{% set header = 'Countries' %}
+{% set tableHeaders = ['Name', 'Capital', 'Region', 'Population', 'Flag'] %}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+{% block nav %}
+  <li><a href="/organizations/"> News Organizations</a></li>
+  <li><a href="/articles/"> Articles</a></li>
+  <li class="active"><a href="/countries/"> Countries</a></li>
+  <li><a href="/about/"> About</a></li>
+{% endblock %}
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+{% block tbody %}
+    {% for item in items %}
+        <tr>
+            <td><a href="/countries/{{item.id}}">{{item.name}}</a></td>
+            <td>{{item.capital}}</td>
+            <td>{{item.region}}</td>
+            <td>{{item.population}}</td>
+            <td><center><img height="50" src="{{item.flag}}"></center></td>
+        </tr>
+    {% endfor %}
+{% endblock %}
 
-    <!-- Latest compiled and minified Locales -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
-
-  </head>
-  <body background="../static/img/oldpaper.jpg">
-
-  	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">Newsr</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li><a href="/articles/"> Articles</a></li>
-	      <li class="active"><a href="/countries/"> Countries</a></li>
-	      <li><a href="/about/"> About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-
-  	<h1 align="center">Countries</h1>
-
-  	<table class="table table-hover"  data-toggle="table" data-sort-name="name" data-sort-order="asc">
-	    <thead>
-	      <tr>
-		    <th data-field="name" data-sortable="true">
-                Name</th>
-		    <th data-field="capital" data-sortable="true">
-                Capital</th>
-		    <th data-field="region" data-sortable="true">
-                Region</th>
-		    <th data-field="population" data-sortable="true">
-                Population</th>
-		    <th data-field="flag">
-                Flag</th>
-		  </tr>
-	    </thead>
-	    <tbody>
-	      {% for item in countries %}
-	      	<tr>
-                <td><a href="/countries/{{item.id}}">{{item.name}}</a></td>
-	      		<td>{{item.capital}}</td>
-	      		<td>{{item.region}}</td>
-	      		<td>{{item.population}}</td>
-	      		<td><center><img height="50" src="{{item.flagUrl}}"></center></td>
-	      	</tr>
-	      {% endfor %}
-	    </tbody>
-	  </table>
-
-  </body>
-</html>

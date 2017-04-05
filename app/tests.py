@@ -1,5 +1,5 @@
 from unittest import main, TestCase
-from models import Source, Article, Country
+from models import Organization, Article, Country
 from app import create_app, db
 
 ctx = create_app()
@@ -12,34 +12,34 @@ class Tests(TestCase):
         db.drop_all()
         db.create_all()
 
-    def test_source_1(self):
-        s = Source(name='Source1')
-        self.assertEqual(s.name, 'Source1')
+    def test_organization_1(self):
+        s = Organization(name='Organization1')
+        self.assertEqual(s.name, 'Organization1')
 
-    def test_source_2(self):
-        s = Source(name='Source1')
+    def test_organization_2(self):
+        s = Organization(name='Organization1')
         db.session.add(s)
-        self.assertEqual(len(Source.query.all()), 1)
+        self.assertEqual(len(Organization.query.all()), 1)
 
-    def test_source_3(self):
-        s = Source(name='Source1')
+    def test_organization_3(self):
+        s = Organization(name='Organization1')
         db.session.add(s)
-        first = Source.query.first()
-        self.assertEqual(first.name, 'Source1')
+        first = Organization.query.first()
+        self.assertEqual(first.name, 'Organization1')
 
-    def test_source_4(self):
+    def test_organization_4(self):
         c = Country(name='USA')
-        s = Source(name='Source1', country=c)
+        s = Organization(name='Organization1', country=c)
         db.session.add(s)
-        first = Source.query.first()
+        first = Organization.query.first()
         self.assertEqual(first.country.name, 'USA')
 
-    def test_source_5(self):
+    def test_organization_5(self):
         a = Article(title='Breaking: Milking Postponed Until Saturday')
-        s = Source(name='CowNews')
+        s = Organization(name='CowNews')
         s.articles.append(a)
         db.session.add(s)
-        first = Source.query.first()
+        first = Organization.query.first()
         self.assertEqual(len(first.articles), 1)
 
     def test_article_1(self):
@@ -58,11 +58,11 @@ class Tests(TestCase):
         self.assertEqual(first.title, 'Article1')
 
     def test_article_4(self):
-        s = Source(name='CowNews')
-        a = Article(title='Why you shouldn\'t drink your own milk', source=s)
+        s = Organization(name='CowNews')
+        a = Article(title='Why you shouldn\'t drink your own milk', organization=s)
         db.session.add(a)
         first = Article.query.first()
-        self.assertEqual(first.source.name, 'CowNews')
+        self.assertEqual(first.organization.name, 'CowNews')
 
     def test_article_5(self):
         c = Country(name='Cowland')
@@ -98,11 +98,11 @@ class Tests(TestCase):
 
     def test_country_5(self):
         c = Country(name='Cowland')
-        s = Source(name='Monthly Milkpost')
-        c.sources.append(s)
+        s = Organization(name='Monthly Milkpost')
+        c.organizations.append(s)
         db.session.add(s)
         first = Country.query.first()
-        self.assertEqual(len(first.sources), 1)
+        self.assertEqual(len(first.organizations), 1)
 
 if __name__ == "__main__":
     main()

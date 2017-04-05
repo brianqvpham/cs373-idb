@@ -1,68 +1,22 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Declare charset and meta ASAP -->
-    <meta charset="utf-8">
-    <meta name="description" content="A  News Website">
-    <title>Articles</title>
+{% extends "model_list.html" %}
 
-    <!-- Load  CSS  -->
-    <!-- <link href="/static/articles.css" rel="stylesheet"> -->
+{% set header = 'Articles' %}
+{% set tableHeaders = ['Title', 'Description', 'Author', 'Published Date'] %}
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+{% block nav %}
+  <li><a href="/organizations/"> News Organizations</a></li>
+  <li class="active"><a href="/articles/"> Articles</a></li>
+  <li><a href="/countries/"> Countries</a></li>
+  <li><a href="/about/"> About</a></li>
+{% endblock %}
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
-
-    <!-- Latest compiled and minified Locales -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
-  </head>
-  <body background="../static/img/oldpaper.jpg">
-
-  	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">Newsr</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li class="active"><a href="/articles/"> Articles</a></li>
-	      <li><a href="/countries/"> Countries</a></li>
-	      <li><a href="/about/"> About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-
-  	<h1 align="center">Articles</h1>
-
-  	<table class="table table-hover"  data-toggle="table" data-sort-name="name" data-sort-order="desc">
-	    <thead>
-	      <tr>
-		    <th data-field="title" data-sortable="true">
-                Title</th>
-		    <th data-field="descr" data-sortable="true">
-                Description</th>
-		    <th data-field="author" data-sortable="true">
-                Author</th>
-		    <th data-field="date" data-sortable="true">
-                Published Date</th>
-		  </tr>
-	    </thead>
-	    <tbody>
-	      {% for item in articles %}
-	      	<tr>
-                <td><a href="/articles/{{item.id}}">{{item.title}}</a></td>
-	      		<td>{{item.description}}</td>
-	      		<td>{{item.author}}</td>
-	      		<td>{{item.publishDate}}</td>
-	      	</tr>
-	      {% endfor %}
-	    </tbody>
-	  </table>
-
-  </body>
-</html>
+{% block tbody %}
+  {% for item in items %}
+    <tr>
+        <td><a href="/articles/{{item.id}}">{{item.title}}</a></td>
+        <td>{{item.description}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.publishedAt}}</td>
+    </tr>
+  {% endfor %}
+{% endblock %}

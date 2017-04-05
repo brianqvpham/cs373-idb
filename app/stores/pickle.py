@@ -20,13 +20,19 @@ class PickleStore():
                     expanded = PickleStore.get(self, f, field["id"])
                 o[f] = expanded
 
-    def get(self, model, id, **kwargs):
+    def get(self, model, id, offset=0, limit=10, **kwargs):
         model = map_model(model)
+        print(offset)
+        offset = int(offset)
+        print(offset)
+        print(kwargs)
+        limit = int(limit)
         resource = self.data[model]
         if id:
             resource = copy.deepcopy(find(resource, 'id', id))
         else:
             resource = copy.deepcopy(resource)
+            resource = resource[offset:(offset+limit)]
         if 'expand' in kwargs:
             self.expand(resource, kwargs['expand'])
         return resource

@@ -3,35 +3,37 @@
 	  <head>
 	    <!-- Declare charset and meta ASAP -->
 	    <meta charset="utf-8">
+			<meta name"viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="description" content="A  News Website">
 	    <title>About</title>
 
 
 	    <link href="../static/style.css" rel="stylesheet">
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	    <link href="sticky-footer.css" rel="stylesheet">
 	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 	  </head>
 
-  	<body background="../static/img/oldpaper.jpg">
-	 	<nav class="navbar navbar-inverse">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
+  	<body>
+			 	<nav class="navbar navbar-inverse">
+				  <div class="container-fluid">
+				    <div class="navbar-header">
 
-		      <a class="navbar-brand" href="/">Newsr</a>
+				      <a class="navbar-brand" href="/">Newsr</a>
 
-		    </div>
-		    <ul class="nav navbar-nav navbar-right">
-		      <li><a href="/organizations/"> News Organizations</a></li>
-		      <li><a href="/articles/"> Articles</a></li>
-		      <li><a href="/countries/"> Countries</a></li>
-		      <li class="active"><a href="/about/"> About</a></li>
-		    </ul>
-		  </div>
-		</nav>
+				    </div>
+				    <ul class="nav navbar-nav navbar-right">
+				      <li><a href="/organizations/"> News Organizations</a></li>
+				      <li><a href="/articles/"> Articles</a></li>
+				      <li><a href="/countries/"> Countries</a></li>
+				      <li class="active"><a href="/about/"> About</a></li>
+				    </ul>
+				  </div>
+				</nav>
+
+
 	 	<!--Container -->
 	 	<div class = "container">
 	 		<h1 align = "center"> About Newsr</h1>
@@ -41,6 +43,7 @@
 	 		<div class="row team-bio match-my-cols">
 	 			<!--Member # 1-->
 	 			<div class= "col-sm-6 about-team-member">
+
 	 				<div class="thumbnail">
 	 					<img class="img-circle" style="width: 200px; height: 200px;" src="../static/img/paola.jpg">
 	 					<div class="caption">
@@ -149,71 +152,92 @@
 	 		</div>
 	 		<!--Team End -->
 
-	 		<div class="tools col-md-3">
-          	<h1 class="header-centered">Tools</h1>
-  			  <div class="row">
-
-              <h4 class="header-centered">Flask</h4>
-              <h4 class="header-centered">Bootstrap</h4>
-        	  <h4 class="header-centered">Github</h4>
-        	  <h4 class="header-centered">AngularJS</h4>
-          	  </div>
-        	</div>
 
 
-
-        	<!-- Stats START -->
-        	<div class="stats col-md-3">
-             <h1 class="header-centered">Team Stats</h1>
-          		<div class="row">
-	            <h4 class="header-centered">Aggregate Commits:94</h4>
-	            <h4 class="header-centered">Aggregate Issues:25</h4>
-	            <h4 class="header-centered">Aggregate Unit Tests:15</h4>
-        		</div>
-        	</div>
-
-        	<!-- Links Start-->
-        	<div class="tools col-md-3">
-          	<h1 class="header-centered">Links</h1>
-  			  <div class="row">
-  			  	<h4 class="header-centered"><a href="http://docs.newsr1.apiary.io/#">Apiary API</a></h4>
-              	<h4 class="header-centered"><a href="https://github.com/brianqvpham/cs373-idb">GitHub Repo</a></h4>
-            	<h4 class="header-centered"><a href="https://github.com/brianqvpham/cs373-idb/wiki" >GitHub Wiki</a></h4>
-            	<h4 class="header-centered"><a href = "https://github.com/brianqvpham/cs373-idb/issues">GitHib Issue Tracker</a></h4>
-          	  </div>
-        	</div>
-
-        	<!--Data Start-->
-        	<div class="data col-md-3">
-        	<h1 class="header-centered">Data</h1>
-        		<div class ="row">
-        		<h4 class="header-centered"><a href=https://restcountries.eu/#api-endpoints-all> REST Countries API</a></h4>
-        		<h4 class="header-centered"><a href=https://newsapi.org> News API</a></h4>
-        		
-        		<p class="header-centered">Data for the first phase of the project was scraped by the REST API and inserting data through our Newsr API.</p>
-
-        		
-        		</div>
-        	</div>	
 
 
 
 
 
 	 	</div>
+		<div class="become">
+				<div class="container">
+					<div class="col-md-5 become-1">
+						<h4> Newsr </h4>
+						<p></p>
+						<a href="" class="more">Run tests</a>
+
+					</div>
+					<div class="col-md-7 become-2">
+						<img src="../static/img/map.png" class="img-responsive" alt="">
+					</div>
+						<div class="clearfix"> </div>
+				</div>
+	 </div>
 
 
 
 	</body>
 
 
-	<footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Newsr 2017</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+	<!-- footer -->
+<div class="footer">
+	<div class="container">
+		<div class="tools col-md-3">
+          	<h4 >Tools</h4>
+	  			  <div class="row">
+
+	              <h1>Flask</h1>
+	              <h1>Bootstrap</h1>
+	        	    <h1>Github</h1>
+	        	    <h1>AngularJS</h1>
+	          	  </div>
+	          </div>
+		<div class="tools col-md-3">
+             <h4>Team Stats</h4>
+          		<div class="row">
+	            <h1>Aggregate Commits:88</h1>
+	            <h1>Aggregate Issues:25</h1>
+	            <h1>Aggregate Unit Tests:9</h1>
+        		</div>
+        	</div>
+		<div class="tools col-md-3">
+          	<h4>Links</h4>
+  			  <div class="row">
+  			  	<h1><a href="http://docs.newsr1.apiary.io/#">Apiary API</a></h1>
+              	<h1><a href="https://github.com/brianqvpham/cs373-idb">GitHub Repo</a></h1>
+            	<h1><a href="https://github.com/brianqvpham/cs373-idb/wiki" >GitHub Wiki</a></h1>
+            	<h1><a href = "https://github.com/brianqvpham/cs373-idb/issues">GitHib Issue Tracker</a></h1>
+          	  </div>
+        	</div>
+		<!--Data Start-->
+        	<div class="tools col-md-3">
+          	<h4>Links</h4>
+  			  <div class="row">
+  			  	<h1><a href="http://docs.newsr1.apiary.io/#">Apiary API</a></h1>
+              	<h1>><a href="https://github.com/brianqvpham/cs373-idb">GitHub Repo</a></h1>
+            	<h1><a href="https://github.com/brianqvpham/cs373-idb/wiki" >GitHub Wiki</a></h1>
+            	<h1><a href = "https://github.com/brianqvpham/cs373-idb/issues">GitHib Issue Tracker</a></h1>
+          	  </div>
+        	</div>
+			<div class="clearfix"> </div>
+	</div>
+</div>
+<!-- footer -->
+
+
+
+
+
+
+	 	</div>
+	 	    <!-- footer-bottom -->
+		<div class="footer-bottom">
+			<div class="container">
+				<p>Copyrights © 2017 Newsr</a></p>
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
  </html>

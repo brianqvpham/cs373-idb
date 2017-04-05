@@ -9,14 +9,14 @@ article_country_table = db.Table('article_country',
 
 class Organization(db.Model):
     """
-    News source model
+    News organization model
 
-    name Name of the source
-    description Description of the source
-    url Url to the source's website
-    logoUrl Url to the source's logo
-    articles List of articles belonging to this source
-    country Country this source normally reports on
+    name Name of the organization
+    description Description of the organization
+    url Url to the organization's website
+    logoUrl Url to the organization's logo
+    articles List of articles belonging to this organization
+    country Country this organization normally reports on
     """
     __tablename__ = 'organization'
     id = db.Column(db.Integer, primary_key=True)
@@ -25,10 +25,9 @@ class Organization(db.Model):
     url = db.Column(db.String)
     logoUrl = db.Column(db.String)
 
-    articles_id = db.Column(db.Integer, db.ForeignKey('article.id'))
     articles = db.relationship('Article', back_populates='organization')
     country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
-    country = db.relationship('Country', back_populates='organization')
+    country = db.relationship('Country', back_populates='organizations')
 
 
     def __repr__(self):
@@ -91,7 +90,7 @@ class Country(db.Model):
             secondary=article_country_table,
             back_populates='countries')
 
-    organization = db.relationship('Organization', back_populates='country')
+    organizations = db.relationship('Organization', back_populates='country')
 
 
     def __repr__(self):

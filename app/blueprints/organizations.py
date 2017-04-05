@@ -1,20 +1,18 @@
 from flask import Blueprint, render_template, jsonify, request
 from blueprints.static_data import static_data
 from store import store
+from util import process_resource_page
 
 organizations_bp = Blueprint('organizations', __name__,)
 
 @organizations_bp.route('/organizations/')
 @organizations_bp.route('/organizations/<id>')
-def show_country(id=None):
-    if (not id):
-        data = static_data['sources']
-        return render_template('organizations.html', organizations=data)
+def show_organization(id=None):
+    if id:
+        template = 'organization.html'
     else:
-        organization = list(filter(lambda x: x["id"] == id, static_data['sources']))[0]
-        articles = list(filter(lambda x: x["id"] in organization['articles'], static_data['articles']))
-        country = list(filter(lambda x: x["id"] == organization['country'], static_data['countries']))[0]
-        return render_template('organization.html', country=country, articles=articles, organization=organization)
+        template = 'organizations.html'
+    return process_resource_page(id, store.Organization, template, expand=['country', 'articles'])
 
 @organizations_bp.route('/api/organizations/')
 @organizations_bp.route('/api/organizations/<id>')
