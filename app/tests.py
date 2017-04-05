@@ -9,10 +9,6 @@ ctx.app_context().push()
 
 class Tests(TestCase):
     def setUp(self):
-        db.session.query(Country).delete()
-        db.session.query(Article).delete()
-        db.session.query(Organization).delete()
-        db.session.commit()
         db.drop_all()
         db.create_all()
 
