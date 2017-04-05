@@ -1,80 +1,45 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Declare charset and meta ASAP -->
-    <meta charset="utf-8">
-    <meta name="description" content="A  News Website">
-    <title>Country - {{ country.title }}</title>
+{% extends "model.html" %}
 
-    <!-- Load  CSS  -->
-    <!-- <link href="/static/articles.css" rel="stylesheet"> -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  </head>
-  <body background="../static/img/oldpaper.jpg">
-
-  	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">Newsr</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li class="active"><a href="/articles/"> Articles</a></li>
-	      <li><a href="/countries/"> Countries</a></li>
-	      <li><a href="/about/"> About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-
-  	<h1 align="center">Country</h1>
-
-  	<table class="table table-hover">
-	    <tbody>
-	      	<tr>
-                <td>Name</td>
-	      		<td>{{country.name}}</td>
-	      	</tr>
-	      	<tr>
-                <td>Capital</td>
-	      		<td>{{country.capital}}</td>
-	      	</tr>
-                <td>Region</td>
-	      		<td>{{country.region}}</td>
-	      	<tr>
-                <td>Population</td>
-	      		<td>{{country.population}}</td>
-            </tr>
-	      	<tr>
-                <td>Articles</td>
-                <td>
-                    {% for a in articles %}
-                        <a href="/articles/{{a.id}}">
-                            {{a.title}}
-                            <br>
-                        </a>
-                    {% endfor %}
-                </td>
-            </tr>
-	      	<tr>
-                <td>Sources</td>
-                <td>
-                    {% for s in sources %}
-                        <a href="/organizations/{{s.id}}">
-                            {{s.name}}
-                            <br>
-                        </a>
-                    {% endfor %}
-                </td>
-            </tr>
-	      	<tr>
-                <td>Flag</td>
-                <td><img src="{{country.flagUrl}}"/></td>
-            </tr>
-	    </tbody>
-	  </table>
-  </body>
-</html>
+{% set header = 'Country' %}
+{% block tbody %}
+    <tr>
+        <td>Name</td>
+        <td>{{item.name}}</td>
+    </tr>
+    <tr>
+        <td>Capital</td>
+        <td>{{item.capital}}</td>
+    </tr>
+        <td>Region</td>
+        <td>{{item.region}}</td>
+    <tr>
+        <td>Population</td>
+        <td>{{item.population}}</td>
+    </tr>
+    <tr>
+        <td>Articles</td>
+        <td>
+            {% for a in item.articles %}
+                <a href="/articles/{{a.id}}">
+                    {{a.title}}
+                    <br>
+                </a>
+            {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td>Sources</td>
+        <td>
+            {% for o in item.organizations %}
+                <a href="/organizations/{{o.id}}">
+                    {{o.name}}
+                    <br>
+                </a>
+            {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td>Flag</td>
+        <td><img src="{{item.flag}}"/></td>
+    </tr>
+{% endblock %}

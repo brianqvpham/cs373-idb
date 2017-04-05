@@ -1,71 +1,36 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Declare charset and meta ASAP -->
-    <meta charset="utf-8">
-    <meta name="description" content="A  News Website">
-    <title>Organization - {{ organization.title }}</title>
+{% extends "model.html" %}
 
-    <!-- Load  CSS  -->
-    <!-- <link href="/static/articles.css" rel="stylesheet"> -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  </head>
-  <body background="../static/img/oldpaper.jpg">
-
-  	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">Newsr</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li class="active"><a href="/organizations/"> News Organizations</a></li>
-	      <li><a href="/articles/"> Articles</a></li>
-	      <li><a href="/countries/"> Countries</a></li>
-	      <li><a href="/about/"> About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-
-  	<h1 align="center">Organization</h1>
-
-  	<table class="table table-hover">
-	    <tbody>
-	      	<tr>
-                <td>Name</td>
-	      		<td>{{organization.name}}</td>
-	      	</tr>
-	      	<tr>
-                <td>Description</td>
-	      		<td>{{organization.description}}</td>
-	      	</tr>
-                <td>URL</td>
-                <td><a href={{organization.url}}>{{organization.url}}</a></td>
-	      	<tr>
-                <td>Articles</td>
-                <td>
-                    {% for a in articles %}
-                        <a href="/articles/{{a.id}}">
-                            {{a.title}}
-                            <br>
-                        </a>
-                    {% endfor %}
-                </td>
-            </tr>
-	      	<tr>
-                <td>Country</td>
-                <td>
-                    <a href="/countries/{{country.id}}"> {{country.name}} </a>
-                </td>
-            </tr>
-	      	<tr>
-                <td>Logo</td>
-                <td><img src="{{organization.logoUrl}}" /></td>
-            </tr>
-	    </tbody>
-	  </table>
-  </body>
-</html>
+{% set header = 'Organization' %}
+{% block tbody %}
+    <tr>
+        <td>Name</td>
+        <td>{{item.name}}</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>{{item.description}}</td>
+    </tr>
+        <td>URL</td>
+        <td><a href={{item.url}}>{{item.url}}</a></td>
+    <tr>
+        <td>Articles</td>
+        <td>
+            {% for a in item.articles %}
+                <a href="/articles/{{a.id}}">
+                    {{a.title}}
+                    <br>
+                </a>
+            {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td>
+            <a href="/countries/{{item.country.id}}"> {{item.country.name}} </a>
+        </td>
+    </tr>
+    <tr>
+        <td>Logo</td>
+        <td><img src="{{item.logoUrl}}" /></td>
+    </tr>
+{% endblock %}

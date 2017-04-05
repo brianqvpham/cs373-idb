@@ -10,16 +10,11 @@ articles_bp = Blueprint('articles', __name__,)
 @articles_bp.route('/articles/<id>')
 def show_article(id=None):
     if (not id):
-        return render_template('articles.html', articles=repo.get_articles())
+        data = store.Article().get(None)
+        return render_template('articles.html', items=data)
     else:
-        article = repo.get_article(id)
-        organizations = repo.get_organizations()
-        organization = find(organizations, 'id', article['org_id'])
-        print(organization)
-        countries = repo.get_countries()
-        countries = [find(countries, 'id', country_id) for country_id in article['countries']]
-        return render_template('article.html', article=article, organization=organization, countries=countries)
-
+        data = store.Article().get(id, expand=['organization', 'countries'])
+        return render_template('article.html', item=data)
 
 @articles_bp.route('/api/articles/')
 @articles_bp.route('/api/articles/<id>')

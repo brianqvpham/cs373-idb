@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1 align="center">{{ header }}</h1>
+<table class="table table-hover">
+    <tbody>
+      {% block tbody %}
+      {% endblock %}
+    </tbody>
+  </table>
+{% endblock %}
