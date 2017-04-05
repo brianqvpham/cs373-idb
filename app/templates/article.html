@@ -1,77 +1,42 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Declare charset and meta ASAP -->
-    <meta charset="utf-8">
-    <meta name="description" content="A  News Website">
-    <title>Article - {{ article.title }}</title>
+{% extends "model.html" %}
 
-    <!-- Load  CSS  -->
-    <!-- <link href="/static/articles.css" rel="stylesheet"> -->
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  </head>
-  <body background="../static/img/oldpaper.jpg">
-
-  	<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <a class="navbar-brand" href="/">Newsr</a>
-	    </div>
-	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="/organizations/"> News Organizations</a></li>
-	      <li class="active"><a href="/articles/"> Articles</a></li>
-	      <li><a href="/countries/"> Countries</a></li>
-	      <li><a href="/about/"> About</a></li>
-	    </ul>
-	  </div>
-	</nav>
-
-  	<h1 align="center">Article</h1>
-
-  	<table class="table table-hover">
-	    <tbody>
-	      	<tr>
-                <td>Title</td>
-	      		<td>{{article.title}}</td>
-	      	</tr>
-	      	<tr>
-                <td>Description</td>
-	      		<td>{{article.description}}</td>
-	      	</tr>
-            <tr>
-                <td>Author</td>
-	      		<td>{{article.author}}</td>
-	      	</tr>
-            <tr>
-                <td>URL</td>
-                <td><a href="{{article.url}}">{{article.url}}</a></td>
-	      	</tr>
-            <tr>
-                <td>Publish Date</td>
-	      		<td>{{article.publishedAt}}</td>
-            </tr>
-	      	<tr>
-                <td>Countries</td>
-                <td>
-                    {% for c in countries %}
-                        <a href="/countries/{{c.id}}">
-                            {{c.name}}
-                            <br>
-                        </a>
-                    {% endfor %}
-                </td>
-            </tr>
-	      	<tr>
-                <td>Organization</td>
-                <td>
-                    <a href="/organizations/{{organization.id}}">{{organization.name}}</a>
-                </td>
-            </tr>
-	    </tbody>
-	  </table>
-  </body>
-</html>
+{% set header = 'Article' %}
+{% block tbody %}
+    <tr>
+        <td>Title</td>
+        <td>{{item.title}}</td>
+    </tr>
+    <tr>
+        <td>Description</td>
+        <td>{{item.description}}</td>
+    </tr>
+    <tr>
+        <td>Author</td>
+        <td>{{item.author}}</td>
+    </tr>
+    <tr>
+        <td>URL</td>
+        <td><a href="{{item.url}}">{{item.url}}</a></td>
+    </tr>
+    <tr>
+        <td>Publish Date</td>
+        <td>{{item.publishedAt}}</td>
+    </tr>
+    <tr>
+        <td>Countries</td>
+        <td>
+            {% for c in item.countries %}
+                <a href="/countries/{{c.id}}">
+                    {{c.name}}
+                    <br>
+                </a>
+            {% endfor %}
+        </td>
+    </tr>
+    <tr>
+        <td>Organization</td>
+        <td>
+            <a href="/organizations/{{item.organization.id}}">{{item.organization.name}}</a>
+        </td>
+    </tr>
+{% endblock %}
