@@ -1,6 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_marshmallow import Marshmallow
+from marshmallow import fields
 
 db = SQLAlchemy()
+ma = Marshmallow()
 
 article_country_table = db.Table('article_country',
         db.Column('article_id', db.Integer, db.ForeignKey('article.id')),
@@ -32,6 +35,16 @@ class Organization(db.Model):
 
     def __repr__(self):
         return '<Organization {0}>'.format(self.country)
+
+class OrganizationSchemaNested(ma.Schema):
+    articles = fields.Nested('ArticleSchema', many=True, only=('id', 'title'))
+    country = fields.Nested('CountrySchema', only=('id', 'name'))
+    class Meta:
+        fields = ('id', 'name', 'description', 'url', 'logoUrl', 'country', 'articles')
+
+class OrganizationSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'name', 'description', 'url', 'logoUrl')
 
 class Article(db.Model):
     """
@@ -65,6 +78,15 @@ class Article(db.Model):
     def __repr__(self):
         return '<Article {0}>'.format(self.title)
 
+class ArticleSchemaNested(ma.Schema):
+    organization = fields.Nested('OrganizationSchema', only=('id', 'name'))
+    countries = fields.Nested('CountrySchema', many=True, only=('id', 'name'))
+    class Meta:
+        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl', 'organization', 'countries')
+
+class ArticleSchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl')
 
 class Country(db.Model):
     """
@@ -95,3 +117,13 @@ class Country(db.Model):
 
     def __repr__(self):
         return '<Country {0}>'.format(self.name)
+
+class CountrySchema(ma.Schema):
+    class Meta:
+        fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl')
+
+class CountrySchemaNested(ma.Schema):
+    articles = fields.Nested(ArticleSchema, many=True, only=('id', 'title'))
+    organizations = fields.Nested(OrganizationSchema, many=True, only=('id', 'name'))
+    class Meta:
+        fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl', 'organizations', 'articles')

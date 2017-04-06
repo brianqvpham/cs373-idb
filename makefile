@@ -1,7 +1,7 @@
 FILES :=                              \
 	app/tests.py \
 	app/models.py \
-	IDB1.log \
+	IDB2.log \
 	apiary.apib \
 	.travis.yml \
     models.html \
@@ -48,7 +48,7 @@ html:
 	$(PYTHON) -m pydoc -w app/models.py
 
 log:
-	git log > IDB1.log
+	git log > IDB2.log
 
 check:
 	@not_found=0;                                 \
@@ -85,7 +85,7 @@ format:
 scrub:
 	make clean
 	rm -f  models.html
-	rm -f  IDB1.log
+	rm -f  IDB2.log
 
 status:
 	make clean
