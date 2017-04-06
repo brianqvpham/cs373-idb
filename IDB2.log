@@ -1,3 +1,78 @@
+commit 78dafacb4d3c9c192b3a6c3efcb8c096b28f917c
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Apr 5 21:30:14 2017 -0500
+
+    Removed expand from API
+
+commit e730aa20f278956e43c48f2fd2ea5f56c8c61268
+Merge: 364f376 0e83943
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Wed Apr 5 21:24:44 2017 -0500
+
+    Adding to tables
+
+commit 364f3764c4eae29bbe4d4fe84b6d23242ff7b835
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Wed Apr 5 21:19:46 2017 -0500
+
+    Made article country relations
+
+commit 0e839437b87b1a53b737c80f3a792b65be47ced6
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 21:18:18 2017 -0500
+
+    Fix template
+
+commit d95ce6f186ad3e5ec89af822cb43df9945f9f381
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 21:14:02 2017 -0500
+
+    More API THINGS IT WORKS
+
+commit 16e7e09ac4dc4a9d3e98069d46d40993f537c846
+Merge: a2c6045 39ffe79
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 20:43:10 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit a2c6045ac52e3977702f97ecbd4d48185ce379a4
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 20:43:06 2017 -0500
+
+    More API things
+
+commit 39ffe793af01b595c6a666750efe6a2ad9756f56
+Merge: c36346b 32efe89
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Apr 5 19:22:54 2017 -0500
+
+    Merge branch 'dev' of github.com:brianqvpham/cs373-idb into dev
+
+commit c36346bf8f6da2784c42c5298731d1656e4e8adf
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Apr 5 19:22:43 2017 -0500
+
+    Updated makefile to create correct log
+
+commit 32efe89f76b467aab116d5e9771b584f00d5dc77
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 18:38:59 2017 -0500
+
+    requirements.txt
+
+commit 5a68a2608c2aacaaceb4b66c7ee8714baf4a4590
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 18:17:58 2017 -0500
+
+    more model stuff
+
+commit a1854e02ae719e34de4eba591f343aa1039ecca7
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 18:12:17 2017 -0500
+
+    Use actual DB
+
 commit e4d8f50cd69cfcb806a77ac8c3a40217984c2a48
 Merge: 89497aa ac796ea
 Author: jaimemunz <jaimemunz@gmail.com>
