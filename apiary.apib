@@ -6,12 +6,9 @@ HOST: http://newsr.me/
 Newsr has a simple API allowing users to view news articles related to 
 specific countries or from certain news organizations.
 
-## News Articles Collection [/api/articles/{?expand}]
+## News Articles Collection [/api/articles/]
 
 ### List News Articles [GET]
-
-+ Parameters
-    + expand (optional) - Link property to expand
 
 + Response 200 (application/json)
 
@@ -35,13 +32,12 @@ specific countries or from certain news organizations.
             }
         ]
         
-## News Article Information Collection [/api/articles/{article_id}{?expand}/]
+## News Article Information Collection [/api/articles/{article_id}]
 
 ### Get information for a news article [GET] 
 
 + Parameters
-    + article_id (number) - ID of the article 
-    + expand (optional) - Link property to expand
+    + article_id (number) - ID of the article
 
 + Response 200 (application/json)
 
@@ -64,12 +60,9 @@ specific countries or from certain news organizations.
         }
 
 
-## Organizations Collection [/api/organizations{?expand}/]
+## Organizations Collection [/api/organizations/]
 
 ### List News Organizations [GET]
-
-+ Parameters
-    + expand (optional) - Link property to expand
     
 + Response 200 (application/json)
 
@@ -92,12 +85,11 @@ specific countries or from certain news organizations.
             }
         ]
         
-## Organization Information Collection [/api/organizations/{org_id}{?expand}/]
+## Organization Information Collection [/api/organizations/{org_id}]
 
 ### Get information for an organization [GET] 
 
 + Parameters
-    + expand (optional) - Link property to expand
     + org_id (number) - ID of the organization 
 
 + Response 200 (application/json)
@@ -120,12 +112,9 @@ specific countries or from certain news organizations.
             
         }
 
-## Countries Collection [/api/countries{?expand}/]
+## Countries Collection [/api/countries/]
 
 ### List Countries [GET]
-
-+ Parameters
-    + expand (optional) - Link property to expand
 
 + Response 200 (application/json)
 
@@ -147,12 +136,11 @@ specific countries or from certain news organizations.
             }
         ]
         
-## Countries Information Collection [/api/countries/{country_id}{?expand}/]
+## Countries Information Collection [/api/countries/{country_id}]
 
 ### Get information for a country [GET] 
 
 + Parameters
-    + expand (optional) - Link property to expand
     + country_id (number) - ID of the country
 
 + Response 200 (application/json)
@@ -173,7 +161,7 @@ specific countries or from certain news organizations.
         }
         
 ## Tests Results Collection [/tests/]
-
+Y
 ### Get results of running unit tests [GET]
 
 + Response 200 (application/json)
