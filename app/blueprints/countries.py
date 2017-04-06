@@ -12,11 +12,13 @@ def show_country(id=None):
         template = 'country.html'
     else:
         template = 'countries.html'
-    return process_resource_page(id, store.Country, template, expand=['articles', 'organizations'])
+    return process_resource_page(id, store.CountryStore(), template, expand=['articles', 'organizations'])
 
 @countries_bp.route('/api/countries/')
 @countries_bp.route('/api/countries/<id>')
 def get_countries(id=None):
     args = request.args.to_dict()
     args['expand'] = request.args.getlist('expand')
-    return jsonify(store.Country().get(id, **args))
+    json = jsonify(store.CountryStore().get(id, **args))
+    print(3)
+    return json

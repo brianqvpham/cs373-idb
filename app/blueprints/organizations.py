@@ -12,11 +12,11 @@ def show_organization(id=None):
         template = 'organization.html'
     else:
         template = 'organizations.html'
-    return process_resource_page(id, store.Organization, template, expand=['country', 'articles'])
+    return process_resource_page(id, store.OrganizationStore(), template, expand=['country', 'articles'])
 
 @organizations_bp.route('/api/organizations/')
 @organizations_bp.route('/api/organizations/<id>')
 def get_organizations(id=None):
     args = request.args.to_dict()
     args['expand'] = request.args.getlist('expand')
-    return jsonify(store.Organization().get(id, **args))
+    return jsonify(store.OrganizationStore().get(id, **args))

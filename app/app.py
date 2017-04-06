@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template
-from models import db
+from flask_marshmallow import Marshmallow
+from models import db, ma
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from blueprints.articles import articles_bp
@@ -36,11 +37,14 @@ def tests():
 
 def create_app():
     app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('IDB_DB_URI')
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.register_blueprint(blueprint)
     app.register_blueprint(articles_bp)
     app.register_blueprint(organizations_bp)
     app.register_blueprint(countries_bp)
     db.init_app(app)
+    ma.init_app(app)
     return app
 
 if __name__ == "__main__":

@@ -18,12 +18,13 @@ def process_resource_page(id, Model, template, expand=[]):
     if (not id):
         args = request.args.to_dict()
         offset = int(args.get('offset', 0))
-        data = Model().get(None, **args)
+        data = Model.get(None, **args)
+        data = data[offset:offset+10]
         current_path = request.path
         prev_url = '{0}?offset={1}'.format(current_path, max(offset - 10, 0))
         next_url = '{0}?offset={1}'.format(current_path, offset + 10)
         return render_template(template, items=data, next_url=next_url, prev_url=prev_url)
     else:
-        data = Model().get(id, expand=expand)
+        data = Model.get(id, expand=expand)
         return render_template(template, item=data)
 
