@@ -8,6 +8,7 @@ ctx.app_context().push()
 
 
 class Tests(TestCase):
+
     def setUp(self):
         db.drop_all()
         db.create_all()
@@ -59,7 +60,8 @@ class Tests(TestCase):
 
     def test_article_4(self):
         s = Organization(name='CowNews')
-        a = Article(title='Why you shouldn\'t drink your own milk', organization=s)
+        a = Article(title='Why you shouldn\'t drink your own milk',
+                    organization=s)
         db.session.add(a)
         first = Article.query.first()
         self.assertEqual(first.organization.name, 'CowNews')

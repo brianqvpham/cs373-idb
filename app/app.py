@@ -13,14 +13,17 @@ import subprocess
 
 blueprint = Blueprint('blueprint', __name__)
 
+
 @blueprint.route('/')
 def index():
     data = {}
     return render_template('home.html', **data)
 
+
 @blueprint.route('/about/')
 def about():
     return render_template('about.html')
+
 
 @blueprint.route('/tests/')
 def tests():
@@ -28,12 +31,13 @@ def tests():
     script_dir = os.path.dirname(__file__)
     try:
         result = subprocess.run(['python3.5',
-                                os.path.join(script_dir, test_script)],
-                                stdout = subprocess.PIPE,
+                                 os.path.join(script_dir, test_script)],
+                                stdout=subprocess.PIPE,
                                 stderr=subprocess.STDOUT, check=True).stdout
     except subprocess.CalledProcessError as e:
         result = e.output
     return result.decode('utf-8')
+
 
 def create_app():
     app = Flask(__name__)
@@ -50,4 +54,3 @@ def create_app():
 if __name__ == "__main__":
     app = create_app()
     app.run(debug=True)
-

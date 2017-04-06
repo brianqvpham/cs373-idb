@@ -6,9 +6,12 @@ db = SQLAlchemy()
 ma = Marshmallow()
 
 article_country_table = db.Table('article_country',
-        db.Column('article_id', db.Integer, db.ForeignKey('article.id')),
-        db.Column('country_id', db.Integer, db.ForeignKey('country.id')),
-)
+                                 db.Column('article_id', db.Integer,
+                                           db.ForeignKey('article.id')),
+                                 db.Column('country_id', db.Integer,
+                                           db.ForeignKey('country.id')),
+                                 )
+
 
 class Organization(db.Model):
     """
@@ -32,19 +35,24 @@ class Organization(db.Model):
     country_id = db.Column(db.Integer, db.ForeignKey('country.id'))
     country = db.relationship('Country', back_populates='organizations')
 
-
     def __repr__(self):
         return '<Organization {0}>'.format(self.country)
+
 
 class OrganizationSchemaNested(ma.Schema):
     articles = fields.Nested('ArticleSchema', many=True, only=('id', 'title'))
     country = fields.Nested('CountrySchema', only=('id', 'name'))
+
     class Meta:
-        fields = ('id', 'name', 'description', 'url', 'logoUrl', 'country', 'articles')
+        fields = ('id', 'name', 'description', 'url',
+                  'logoUrl', 'country', 'articles')
+
 
 class OrganizationSchema(ma.Schema):
+
     class Meta:
         fields = ('id', 'name', 'description', 'url', 'logoUrl')
+
 
 class Article(db.Model):
     """
@@ -72,21 +80,28 @@ class Article(db.Model):
     organization = db.relationship('Organization', back_populates='articles')
 
     countries = db.relationship('Country',
-            secondary=article_country_table,
-            back_populates='articles')
+                                secondary=article_country_table,
+                                back_populates='articles')
 
     def __repr__(self):
         return '<Article {0}>'.format(self.title)
 
+
 class ArticleSchemaNested(ma.Schema):
     organization = fields.Nested('OrganizationSchema', only=('id', 'name'))
     countries = fields.Nested('CountrySchema', many=True, only=('id', 'name'))
+
     class Meta:
-        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl', 'organization', 'countries')
+        fields = ('id', 'title', 'author', 'description', 'publishDate',
+                  'url', 'imageUrl', 'organization', 'countries')
+
 
 class ArticleSchema(ma.Schema):
+
     class Meta:
-        fields = ('id', 'title', 'author', 'description', 'publishDate', 'url', 'imageUrl')
+        fields = ('id', 'title', 'author', 'description',
+                  'publishDate', 'url', 'imageUrl')
+
 
 class Country(db.Model):
     """
@@ -109,21 +124,26 @@ class Country(db.Model):
     flagUrl = db.Column(db.String)
 
     articles = db.relationship('Article',
-            secondary=article_country_table,
-            back_populates='countries')
+                               secondary=article_country_table,
+                               back_populates='countries')
 
     organizations = db.relationship('Organization', back_populates='country')
-
 
     def __repr__(self):
         return '<Country {0}>'.format(self.name)
 
+
 class CountrySchema(ma.Schema):
+
     class Meta:
         fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl')
 
+
 class CountrySchemaNested(ma.Schema):
     articles = fields.Nested(ArticleSchema, many=True, only=('id', 'title'))
-    organizations = fields.Nested(OrganizationSchema, many=True, only=('id', 'name'))
+    organizations = fields.Nested(
+        OrganizationSchema, many=True, only=('id', 'name'))
+
     class Meta:
-        fields = ('id', 'name', 'capital', 'region', 'population', 'flagUrl', 'organizations', 'articles')
+        fields = ('id', 'name', 'capital', 'region', 'population',
+                  'flagUrl', 'organizations', 'articles')

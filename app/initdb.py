@@ -4,9 +4,7 @@ import pickle
 
 with create_app().app_context():
 
-    data = pickle.load( open("stores/data/data.pickle", "rb"))
-
-
+    data = pickle.load(open("stores/data/data.pickle", "rb"))
 
     from models import db
     db.create_all()
@@ -14,20 +12,20 @@ with create_app().app_context():
     # Counry article relation
     id_countries = {}
     for x in data['countries']:
-        id_countries[x['id']]  = x['name']
-    #print(id_countries)
+        id_countries[x['id']] = x['name']
+    # print(id_countries)
 
     # For loop the articles
     for art in data['articles']:
         #print(str(art) + "\n")
         # get the article query
-        a = Article.query.filter_by(title = art['title']).first()
+        a = Article.query.filter_by(title=art['title']).first()
         for cou in art['countries']:
             # get country
-            #print(cou)
+            # print(cou)
             c_name = id_countries[cou['id']]
-            #print(c_name)
-            c = Country.query.filter_by(name = c_name).first()
+            # print(c_name)
+            c = Country.query.filter_by(name=c_name).first()
             a.countries.append(c)
         print(a.countries)
     db.session.commit()
