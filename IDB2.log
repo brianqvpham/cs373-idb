@@ -1,3 +1,215 @@
+commit e4d8f50cd69cfcb806a77ac8c3a40217984c2a48
+Merge: 89497aa ac796ea
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Wed Apr 5 14:21:44 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 89497aa71fd4fc03132828e097e2eba7c66f56c4
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Wed Apr 5 14:17:51 2017 -0500
+
+    Getting relationship error when creating article table
+
+commit ac796eab4cb1394a37bba67f1c522077f2a63188
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Wed Apr 5 12:24:19 2017 -0500
+
+    Readd layout.html
+
+commit febb546840ebc3bb78e63e6e578141ed00312a41
+Author: Pikachu94 <paolajara@wireless-10-146-76-247.public.utexas.edu>
+Date:   Wed Apr 5 10:12:26 2017 -0500
+
+    fixing carousel
+
+commit c6d856d6c763092f490e81f4c41b6178168ccf81
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Wed Apr 5 02:09:45 2017 -0500
+
+    trying to add carousel
+
+commit 75d60b30913c60034c1d5a103b8691232487161b
+Merge: a0a133a 9b94e87
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 20:57:05 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit a0a133a5a6df4a09080c488250147ccc78758122
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 20:57:02 2017 -0500
+
+    Mostly pagination stuff
+
+commit 9b94e87799d6c9170e0fc8d5014169d9c1a91a57
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Apr 4 20:39:09 2017 -0500
+
+    Removed extraneous code breaking unit tests.
+
+commit 677cdc498cbdba46a05a3c8243d7057f1ad73897
+Merge: 2784479 f8fd0aa
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Apr 4 20:33:45 2017 -0500
+
+    Merge branch 'dev' of github.com:brianqvpham/cs373-idb into dev
+
+commit 2784479c37e582dee0837adaed7d5cc6bf925d88
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Apr 4 20:33:33 2017 -0500
+
+    Fixed unit tests.
+
+commit f8fd0aab79370a9de240701266d6ec55e883a3f6
+Merge: d77a568 8950903
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 20:07:36 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit d77a5687cb4d6c95f5bfa561e2f9df0cf87c23d1
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 20:07:32 2017 -0500
+
+    Template things
+
+commit 8950903f937d6c61ba65577619387d8484418db8
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Tue Apr 4 19:26:04 2017 -0500
+
+    Added unit tests endpoint to API
+
+commit 32474dc4b4740b3132ca69451e2893ca4bc26706
+Merge: 0ffe002 8e3d02b
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Tue Apr 4 18:43:49 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 0ffe002380bed97f1ec59e3140dfd07f7d2c75c6
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Tue Apr 4 18:42:51 2017 -0500
+
+    More name changes
+
+commit 8e3d02b5905e9b4c739287f23e565d00f19da863
+Merge: c1a0448 9dadc29
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 18:38:47 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit c1a044811daa9add7350dd697af30c84ff2e24d9
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 4 18:38:43 2017 -0500
+
+    More API things
+
+commit 9dadc29a74ee778e5d1a76e3ecb7b62ba3ab34ac
+Author: jaimemunz <jaimemunz@gmail.com>
+Date:   Tue Apr 4 18:09:03 2017 -0500
+
+    Changed sources to organization
+
+commit dc2540d05a516aaeb0c98108c560b69d9fb760fb
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Mon Apr 3 22:57:35 2017 -0500
+
+    More API things
+
+commit 0af44ded88f70f74b6db628a1a08fb53ea1b3737
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Mon Apr 3 17:50:41 2017 -0500
+
+    More expand stuff
+
+commit 0aaa7968230a5991e7fd8adf386598a998b44604
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Mon Apr 3 17:27:45 2017 -0500
+
+    Add expand to API
+
+commit b248db3a5fe1f8de5124a9fd30b431438a56cc63
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Sun Apr 2 01:47:05 2017 -0500
+
+    More data pickley stuff
+
+commit 64edfa7d0ad5bb9387b28af2d58c3de8ceae5263
+Merge: c8fbff0 d2466b9
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Sun Apr 2 00:06:50 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit c8fbff06a3d87323fbcfa27ca3d9a7ea465f52d5
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Sun Apr 2 00:06:24 2017 -0500
+
+    Generate pickle file with connections between models
+
+commit d2466b9ee6a40fe1ecdcacfd5d47c57f43416150
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 20:57:25 2017 -0500
+
+    Removed duplicate import
+
+commit 544665d85bdbb5f37658763d9ff6e9db6c9f05da
+Merge: 25a77a0 1b428db
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Fri Mar 31 20:14:23 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 25a77a0140fe260a480404c85ee542dcb6c94c69
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Fri Mar 31 20:14:18 2017 -0500
+
+    Add initial repo file
+
+commit 1b428db30d893ac577b2ac0f4e8448ef9877a1de
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 20:01:53 2017 -0500
+
+    Readded import line in app.py
+
+commit 49de628bfafae05087a9e7effd2621cddbbb7f56
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 18:12:19 2017 -0500
+
+    Renamed db connection to db_string
+
+commit 4ad2fe0c7316b4a09e80f5568c55e115a1a776f9
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 18:06:41 2017 -0500
+
+    Added link to database in app.py
+
+commit 00f70f4e14847306ef4e9fbf7e5a6ab40acfed6e
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 15:42:59 2017 -0500
+
+    Added route to /tests/ to run unit tests.
+
+commit a6460b3b77091a9ed42161520a127ae965523954
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 14:39:26 2017 -0500
+
+    Fixed formatting of API
+
+commit e084e706e4e980831ec61f93984117b404caef81
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Fri Mar 31 14:34:26 2017 -0500
+
+    Extended REST API documentation
+
+commit 09fb5887c0c5983c2b02ae1bf1a99e62de2dc832
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Mar 23 21:24:26 2017 -0500
+
+    Added git log
+
 commit 09e7c8760c20aebda6f9aedd3096eec670272abf
 Author: Brian <brianqvpham@hotmail.com>
 Date:   Thu Mar 23 21:22:08 2017 -0500
