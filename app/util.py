@@ -16,6 +16,7 @@ def find(data, attr, value):
 
 def process_resource_page(id, Model, template):
     data = Model.get(id)
+    print(data)
     return render_template(template, item=data)
 
 def process_resource_list_page(Model, template):
