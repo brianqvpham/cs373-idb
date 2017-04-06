@@ -18,22 +18,22 @@
 
 	  </head>
 
-  	<body>
-			 	<nav class="navbar navbar-inverse">
-				  <div class="container-fluid">
-				    <div class="navbar-header">
+  	<body background="../static/img/bootstrap-background.jpg">
+		 	<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			    <div class="navbar-header">
 
-				      <a class="navbar-brand" href="/">Newsr</a>
+			      <a class="navbar-brand" href="/">Newsr</a>
 
-				    </div>
-				    <ul class="nav navbar-nav navbar-right">
-				      <li><a href="/organizations/"> News Organizations</a></li>
-				      <li><a href="/articles/"> Articles</a></li>
-				      <li><a href="/countries/"> Countries</a></li>
-				      <li class="active"><a href="/about/"> About</a></li>
-				    </ul>
-				  </div>
-				</nav>
+			    </div>
+			    <ul class="nav navbar-nav navbar-right">
+			      <li><a href="/organizations/"> News Organizations</a></li>
+			      <li><a href="/articles/"> Articles</a></li>
+			      <li><a href="/countries/"> Countries</a></li>
+			      <li class="active"><a href="/about/"> About</a></li>
+			    </ul>
+			  </div>
+			</nav>
 
 
 
@@ -165,19 +165,27 @@
 
 	 	</div>
 		<div class="become">
-				<div class="container">
-					<div class="col-md-5 become-1">
-						<h4> Newsr </h4>
-						<p></p>
-						<a href="" class="more">Run tests</a>
+			<div class="container">
+				<div class="col-md-5 become-1">
+					<h4> Newsr </h4>
+					<p></p>
+					<a href="" class="more" button id="myBtn" value="myvalue" on-click="myFunction()">Run tests</a>
+					<!-- <a href="" class="more">Run tests</a> -->
 
-					</div>
-					<div class="col-md-7 become-2">
-						<img src="../static/img/map.png" class="img-responsive" alt="">
-					</div>
-						<div class="clearfix"> </div>
 				</div>
-	 </div>
+				<div class="col-md-7 become-2">
+					<img src="../static/img/map.png" class="img-responsive" alt="">
+				</div>
+					<div class="clearfix"> </div>
+			</div>
+
+			<script>
+			function myFunction() {
+			     var popup = document.getElementById("myPopup");
+    			popup.classList.toggle("show");
+			}
+			</script>
+	 	</div>
 
 
 
