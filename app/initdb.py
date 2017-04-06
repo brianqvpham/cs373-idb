@@ -7,6 +7,55 @@ import pickle
 with create_app().app_context():
 
     data = pickle.load( open("stores/data/data.pickle", "rb"))
+
+
+
+    from models import db
+    db.create_all()
+
+    # Counry article relation
+    id_countries = {}
+    for x in data['countries']:
+        id_countries[x['id']]  = x['name']
+    #print(id_countries)
+
+    # For loop the articles
+    for art in data['articles']:
+        #print(str(art) + "\n")
+        # get the article query
+        a = Article.query.filter_by(title = art['title']).first()
+        for cou in art['countries']:
+            # get country
+            #print(cou)
+            c_name = id_countries[cou['id']]
+            #print(c_name)
+            c = Country.query.filter_by(name = c_name).first()
+            a.countries.append(c)
+        print(a.countries)
+    db.session.commit()
+
+'''
+
+    from models import db
+    db.create_all()
+
+
+    for ar in data['articles']:
+        #print("for loop start" + "\n")
+        org = Organization.query.filter_by(name = org_id[ar['organization']['id']]).first()
+        #print(str(org.id))
+    
+        article = Article(title = ar['title'], author = ar['author'], description = ar['description'], publishDate = ar['publishedAt'], url = ar['url'], imageUrl = ar['urlToImage'], organization_id = org.id) #, countries = ar['countries'])
+        print(str(article))
+        
+        db.session.add(article)
+        #print("added")
+    db.session.commit()
+    #print("commited")
+
+
+
+
     org_id = {}
 
     for o in data['organizations']:
@@ -34,35 +83,9 @@ with create_app().app_context():
     print(str(Article.querty.all()))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    
-'''
-    #organizations
-    for org in data['organizations']:
-        #print(str(org) + "\n")
-        organization = Organization(name = org['name'], description = org['description'], url = org['url'], logoUrl = org['urlsToLogos']['medium'], country_id = org['country']['id'])
-        db.session.add(organization)
 
-    db.session.commit()
-
-    #countries
+    #Organizations
     id_countries = {}
     for x in data['countries']:
         id_countries[x['id']]  = x['name']
@@ -70,6 +93,8 @@ with create_app().app_context():
 
     from models import db
     db.create_all()
+
+
     for org in data['organizations']:
         country = Country.query.filter_by(name = id_countries[org['country']['id']]).first()
         organization = Organization(name = org['name'], description = org['description'], url = org['url'], logoUrl = org['urlsToLogos']['medium'], country_id = country.id)
@@ -79,6 +104,14 @@ with create_app().app_context():
 
     print(str(Organization.query.all()))
 
+    for c in data['countries']:
+        country = Country(name = c['name'], capital = c['capital'], region = c['region'], population = c['population'], flagUrl = c['flag'])
+        print(country)
+        db.session.add(country)
+        
+    db.session.commit()
+
+    print(str(Country.query.all()))
 
 
 '''
