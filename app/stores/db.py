@@ -1,4 +1,4 @@
-from models import Organization, OrganizationSchema, OrganizationSchemaNested, Country, CountrySchema, CountrySchemaNested
+from models import Organization, OrganizationSchema, OrganizationSchemaNested, Country, CountrySchema, CountrySchemaNested, Article, ArticleSchema, ArticleSchemaNested
 
 class DBStore():
     def get(self, Model, Schema, id, **args):
@@ -8,6 +8,8 @@ class DBStore():
         else:
             resource = Model.query.all()
             schema = Schema(many=True)
+            offset = int(args.get('offset', 0))
+            resource = resource[offset:offset+10]
         return schema.dump(resource).data
 
 class OrganizationStore(DBStore):
@@ -25,4 +27,12 @@ class CountryStore(DBStore):
         else:
             schema = CountrySchema
         return super().get(Country, schema, id, **args)
+
+class ArticleStore(DBStore):
+    def get(self, id=None, **args):
+        if(id):
+            schema = ArticleSchemaNested
+        else:
+            schema = ArticleSchema
+        return super().get(Article, schema, id, **args)
 
