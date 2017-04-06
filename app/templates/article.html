@@ -1,6 +1,14 @@
 {% extends "model.html" %}
 
 {% set header = 'Article' %}
+
+{% block nav %}
+  <li><a href="/organizations/"> News Organizations</a></li>
+  <li><a href="/articles/"> Articles</a></li>
+  <li><a href="/countries/"> Countries</a></li>
+  <li><a href="/about/"> About</a></li>
+{% endblock %}
+
 {% block tbody %}
     <tr>
         <td>Title</td>
