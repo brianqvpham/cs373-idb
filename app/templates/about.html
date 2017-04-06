@@ -168,24 +168,53 @@
 			<div class="container">
 				<div class="col-md-5 become-1">
 					<h4> Newsr </h4>
-					<p></p>
-					<a href="" class="more" button id="myBtn" value="myvalue" on-click="myFunction()">Run tests</a>
-					<!-- <a href="" class="more">Run tests</a> -->
+					<hr>
+
 
 				</div>
 				<div class="col-md-7 become-2">
 					<img src="../static/img/map.png" class="img-responsive" alt="">
 				</div>
-					<div class="clearfix"> </div>
+
+				<div class="row unit-tests-row">
+
+
+         <div class="col-sm-12">
+           <div class="text-center">
+             <button class="btn btn-primary" id="unit-tests" data-toggle="modal" data-target="#unitTestModal" ng-click="runUnitTests()">Run Our Unit Tests</button>
+           </div>
+
+           <div id="unitTestModal" class="modal fade" role="dialog">
+             <div class="modal-dialog">
+               <div class="modal-content">
+                 <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                 </div>
+                 <div class="modal-body">
+                   <p>"Welcome to our unit tests"</p>
+                   <p>"Test results"</p>
+                 </div>
+                 <div class="modal-footer">
+                   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+               </div>
+           </div>
+           </div>
+				 </div>
+
 			</div>
 
 			<script>
 			function myFunction() {
 			     var popup = document.getElementById("myPopup");
+
     			popup.classList.toggle("show");
 			}
 			</script>
+			<script src="/static/js/about.js"></script>
 	 	</div>
+	</div>
 
 
 
