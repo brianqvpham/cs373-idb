@@ -58,8 +58,8 @@
 			                <p class="header-centered"><b>Major Responsibilities</b></p>
 			                <p class="header-centered">Front End of the project</p>
 			                <p class="header-centered"><b>Stats</b></p>
-			                <p class="header-centered"><b># of commits: 16</b></p>
-			                <p class="header-centered"><b># of issues: 5</b></p>
+			                <p class="header-centered"><b># of commits: 24</b></p>
+			                <p class="header-centered"><b># of issues: 9</b></p>
 			                <p class="header-centered"><b># of unit tests: 0</b></p>
 
 
@@ -80,8 +80,8 @@
 			                <p class="header-centered">I am working on the frontend for this project.</p>
 			                <p class="header-centered"></p>
 			                <p class="header-centered"><b>Stats</b></p>
-			                <p class="header-centered"><b># of commits: 10</b></p>
-			                <p class="header-centered"><b># of issues: 5</b></p>
+			                <p class="header-centered"><b># of commits: 24</b></p>
+			                <p class="header-centered"><b># of issues: 9</b></p>
 			                <p class="header-centered"><b># of unit tests: 0</b></p>
 
 
@@ -101,8 +101,8 @@
 			                <p class="header-centered"><b>Major Responsibilities</b></p>
 			                <p class="header-centered">I worked on setting up the backend, retrieving the data, and aws.</p>
 			                <p class="header-centered"><b>Stats</b></p>
-			                <p class="header-centered"><b># of commits: 10</b></p>
-			                <p class="header-centered"><b># of issues: 5</b></p>
+			                <p class="header-centered"><b># of commits: 24</b></p>
+			                <p class="header-centered"><b># of issues: 9</b></p>
 			                <p class="header-centered"><b># of unit tests: 0</b></p>
 
 
@@ -122,8 +122,8 @@
 			                <p class="header-centered"><b>Major Responsibilities</b></p>
 			                <p class="header-centered">Database models and unit tests, Flask server</p>
 			                <p class="header-centered"><b>Stats</b></p>
-			                <p class="header-centered"><b># of commits: 24</b></p>
-			                <p class="header-centered"><b># of issues: 5</b></p>
+			                <p class="header-centered"><b># of commits: 41</b></p>
+			                <p class="header-centered"><b># of issues: 10</b></p>
 			                <p class="header-centered"><b># of unit tests: 15</b></p>
 
 
@@ -144,8 +144,8 @@
 			                <p class="header-centered"><b>Major Responsibilities</b></p>
 			                <p class="header-centered">Pulling and storing data through APIs, Flask server, </p>
 			                <p class="header-centered"><b>Stats</b></p>
-			                <p class="header-centered"><b># of commits: 24</b></p>
-			                <p class="header-centered"><b># of issues: 5</b></p>
+			                <p class="header-centered"><b># of commits: 39</b></p>
+			                <p class="header-centered"><b># of issues: 9</b></p>
 			                <p class="header-centered"><b># of unit tests: 0</b></p>
 
 
@@ -180,28 +180,45 @@
 
 
          <div class="col-sm-12">
-           <div class="text-center">
-             <!--<button class="btn btn-primary" id="unit-tests" data-toggle="modal" data-target="#unitTestModal" ng-click="runUnitTests()">Run Our Unit Tests</button>-->
-						 <a href="http://newsr.me/tests/" class="btn btn-primary id="unit-tests"">Go to our Unit Tests</a>
-           </div>
+            <div class="text-center">
+                <button class="btn btn-primary" id="unit-tests" data-toggle="modal" data-target="#unitTestModal" onclick="runTests();">Run Our Unit Tests</button>
+                <div id="unitTestModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Welcome to our unit tests</p>
+                                <p>Test results</p>
+                                <div id='results'></div>
+                            </div>
 
-           <!--<div id="unitTestModal" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-               <div class="modal-content">
-                 <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <script>
+                            function runTests() {
+                                var testEndpoint = "../tests";
+                                $.getJSON(testEndpoint)
+                                .done(function(data) {
+                                    document.getElementById('results').innerHTML=data.test_results;
+                                })};
+                            </script>
 
-                 </div>
-                 <div class="modal-body">
-                   <p>"Welcome to our unit tests"</p>
-                   <p>"Test results"</p>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="resetResults();">Close</button>
+
+                                <script>
+                                    function resetResults() {
+                                        $('#results').empty();
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
                </div>
            </div>
-				 </div>-->
+        </div>
 				 </div>
 
 			</div>
@@ -254,15 +271,13 @@
         	</div>
 		<!--Data Start-->
         	<div class="tools col-md-3">
-          	<h4>Links</h4>
+          	<h4>Data</h4>
   			  <div class="row">
-  			  	<h1><a href="http://docs.newsr1.apiary.io/#">Apiary API</a></h1>
-              	<h1><a href="https://github.com/brianqvpham/cs373-idb">GitHub Repo</a></h1>
-            	<h1><a href="https://github.com/brianqvpham/cs373-idb/wiki" >GitHub Wiki</a></h1>
-            	<h1><a href = "https://github.com/brianqvpham/cs373-idb/issues">GitHib Issue Tracker</a></h1>
-          	  </div>
+						<h4 class="header-centered"><a href=https://restcountries.eu/#api-endpoints-all> News</a></h4>
+        		<p class="header-centered">Data for the first phase of the project was scraped by the REST API and inserting data through our Newsr API.</p>
+
         	</div>
-			<div class="clearfix"> </div>
+
 	</div>
 </div>
 <!-- footer -->
@@ -278,7 +293,7 @@
 			<div class="container">
 				<p>Copyrights © 2017 Newsr</a></p>
 
-				<div class="clearfix"> </div>
+				
 			</div>
 		</div>
 

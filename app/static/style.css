@@ -10,6 +10,7 @@
 
 table {
     font-family: arial, sans-serif;
+    font-color: white;
     border-collapse: collapse;
     width: 100%;
 }
@@ -27,7 +28,7 @@ tr:nth-child(even) {
 body {
   background-color: gray;
   font-family: 'Open Sans', sans-serif;
-  font-color: white;
+
 }
 
 /*body{

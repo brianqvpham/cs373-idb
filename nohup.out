@@ -1,9 +1,0 @@
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 299-737-182
-127.0.0.1 - - [06/Apr/2017 13:47:03] "GET /about/ HTTP/1.1" 200 -
-127.0.0.1 - - [06/Apr/2017 13:47:07] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [06/Apr/2017 13:47:11] "GET /organizations/ HTTP/1.1" 200 -
-127.0.0.1 - - [06/Apr/2017 13:47:13] "GET /about/ HTTP/1.1" 200 -
-127.0.0.1 - - [06/Apr/2017 13:47:37] "GET /about/ HTTP/1.1" 200 -
