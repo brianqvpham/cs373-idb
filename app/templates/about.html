@@ -180,28 +180,45 @@
 
 
          <div class="col-sm-12">
-           <div class="text-center">
-             <!--<button class="btn btn-primary" id="unit-tests" data-toggle="modal" data-target="#unitTestModal" ng-click="runUnitTests()">Run Our Unit Tests</button>-->
-						 <a href="http://newsr.me/tests/" class="btn btn-primary id="unit-tests"">Go to our Unit Tests</a>
-           </div>
+            <div class="text-center">
+                <button class="btn btn-primary" id="unit-tests" data-toggle="modal" data-target="#unitTestModal" onclick="runTests();">Run Our Unit Tests</button>
+                <div id="unitTestModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Welcome to our unit tests</p>
+                                <p>Test results</p>
+                                <div id='results'></div>
+                            </div>
 
-           <!--<div id="unitTestModal" class="modal fade" role="dialog">
-             <div class="modal-dialog">
-               <div class="modal-content">
-                 <div class="modal-header">
-                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <script>
+                            function runTests() {
+                                var testEndpoint = "../tests";
+                                $.getJSON(testEndpoint)
+                                .done(function(data) {
+                                    document.getElementById('results').innerHTML=data.test_results;
+                                })};
+                            </script>
 
-                 </div>
-                 <div class="modal-body">
-                   <p>"Welcome to our unit tests"</p>
-                   <p>"Test results"</p>
-                 </div>
-                 <div class="modal-footer">
-                   <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="resetResults();">Close</button>
+
+                                <script>
+                                    function resetResults() {
+                                        $('#results').empty();
+                                    }
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
                </div>
            </div>
-				 </div>-->
+        </div>
 				 </div>
 
 			</div>

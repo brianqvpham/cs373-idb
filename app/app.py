@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template
+from flask import Flask, Blueprint, render_template, jsonify
 from flask_marshmallow import Marshmallow
 from models import db, ma
 from sqlalchemy import create_engine
@@ -36,7 +36,7 @@ def tests():
                                 stderr=subprocess.STDOUT, check=True).stdout
     except subprocess.CalledProcessError as e:
         result = e.output
-    return result.decode('utf-8')
+    return jsonify({"test_results" : str(result.decode('utf-8')).replace('\n', ' ')})
 
 
 def create_app():
