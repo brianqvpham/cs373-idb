@@ -10,6 +10,7 @@ class DBStore():
             resource = Model.query.all()
             schema = Schema(many=True)
             offset = int(args.get('offset', 0))
+#            resource = resource[offset:offset+10]
             limit = int(args.get('limit', 10))
             resource = resource[offset:offset+limit]
         return schema.dump(resource).data

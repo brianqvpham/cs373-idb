@@ -8,6 +8,7 @@ from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
 from blueprints.static_data import static_data
 from blueprints.search import search_bp
+from blueprints.wishlist import wishlist_bp
 
 import os
 import subprocess
@@ -49,6 +50,7 @@ def create_app():
     app.register_blueprint(organizations_bp)
     app.register_blueprint(countries_bp)
     app.register_blueprint(search_bp)
+    app.register_blueprint(wishlist_bp)
     db.init_app(app)
     ma.init_app(app)
     return app
