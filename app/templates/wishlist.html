@@ -98,7 +98,9 @@
 									  </button>
 									  
 									  <div class="dropdown-menu">
-									    ...
+                                        {% for rating in ratings %}
+                                            <div>{{rating}}</div>
+                                        {% endfor %}
 									  </div>
 									</div>
                                     

@@ -17,7 +17,7 @@ def show_wishlist():
     game_data = {}
     game_data["themes"] = ["Action", "Adventure", "Roleplay", "Scifi"]
     game_data["ratings"] = ["E", "M", "T"]
-    return render_template('wishlist.html', themes=game_data["themes"])#, game_data["ratings"])
+    return render_template('wishlist.html', themes=game_data["themes"], ratings=game_data["ratings"])
 
 @wishlist_bp.route('/wishlist/<op_1>')
 def show_wishlist_result(op_1=None):
