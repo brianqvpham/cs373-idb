@@ -20,9 +20,14 @@ def fill(data, baseURL):
             "or": ors
             }
 
-# @search_bp.route('/search')
-def search(query):
-    # words = request.args.get('query', '').split(',')
+
+@search_bp.route('/api/search')
+def search_route():
+    query = request.args.get('query', '')
+    return jsonify(search(query))
+
+
+def search(query=None):
     words = query.split(',')
 
     organizations = store.OrganizationStore().search(words)
