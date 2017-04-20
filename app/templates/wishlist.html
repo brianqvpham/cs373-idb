@@ -5,7 +5,7 @@
 	    <meta charset="utf-8">
 			<meta name"viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="description" content="A  News Website">
-	    <title>About</title>
+	    <title>Wishlist</title>
 
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -45,7 +45,6 @@
 			
 				});
 			});
-
 		});
 	</script>
 
@@ -71,10 +70,11 @@
 			  </div>
 			</nav>
 
+			
+	</body>
 
-
-			<!-- Large button groups (default and split) -->
-			<div class="wishlist-background" data-stellar-background-ratio="0.6">
+			
+			<div class="wishlist-background">
           
                     <div class="container">
                         <div class="row">
@@ -83,13 +83,17 @@
                                     <p>Games Wishlist</p>
                                     <h2><span class="typing"></span></h2>
                                     <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
 									    Theme
 									  </button>
 									  <div class="dropdown-menu">
+									  	
                                         {% for theme in themes %}
-                                            <div>{{theme}}</div>
+                                           <div>
+                                            	{{theme}}
+                                           </div>
 									    {% endfor %}
+										
                                       </div>
 									</div>
 									<div class="btn-group">
@@ -97,11 +101,11 @@
 									    Ratings
 									  </button>
 									  
-									  <div class="dropdown-menu">
+									  <select class="dropdown-menu">
                                         {% for rating in ratings %}
-                                            <div>{{rating}}</div>
+                                            <option>{{rating}}</option>
                                         {% endfor %}
-									  </div>
+									  </select>
 									</div>
                                     
                                 
@@ -111,16 +115,24 @@
                     </div>
               
         </div>
-			<div class= "container">
-				
-			</div>
+         <div class="container">
+
+              <h1>Wishlist</h1>
+              <hr>
+          </div>
+          <div class="container">
+
+            
+          </div>
+
+			
 
 			
 
 
 
 
-	 </body>	
+	 	
 <!-- footer -->
 
 
@@ -138,4 +150,4 @@
 			</div>
 		</div>
 
- </html>
+</html>
