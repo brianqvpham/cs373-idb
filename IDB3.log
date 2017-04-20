@@ -1,3 +1,328 @@
+commit cb5349a0b3cd7f8e664922db7db849a18ee58741
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 18:24:12 2017 -0500
+
+    updating page
+
+commit a7a7244a77b4322d17e1348acaa1383c93b74cd1
+Merge: 383ba4b af126ee
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 17:21:56 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 383ba4b57c2cdeacf6a394b65c525679c0293eaa
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 17:21:45 2017 -0500
+
+    implemented dropdown wfor themes and ratings
+
+commit af126eed5f8f5c55ca607f85017f9d68b4c18534
+Merge: ff96f2f 7d18c29
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 16:58:25 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit ff96f2f81394bc8437d9464a157411ad1bf0b74b
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 16:58:17 2017 -0500
+
+    Fixed search to include both and/or results
+
+commit 7d18c29749342e1af30400bb1fc9f5fd19f87252
+Merge: 30f742a ac64968
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 16:29:43 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 30f742afc112b7ab09b91a07de98fd324b421105
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 16:29:34 2017 -0500
+
+    fixing wishlist page
+
+commit ac649685468507d7b198424f6cad51d0cc0115b5
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 15:34:11 2017 -0500
+
+    Case insensitive search
+
+commit a6499b64f62fd3f523da383f6c9e6c34cc7dab44
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 13:53:04 2017 -0500
+
+    fixing other page group
+
+commit 4f2b3268ceb2d2cc4099d5ef519e24f73e770a05
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 20 12:26:05 2017 -0500
+
+    Added query_games function
+
+commit 2f7832fa2d00ba867802c1e84582be3e44b27451
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 20 12:03:11 2017 -0500
+
+    Populated ratings select menu,
+
+commit a8e350846e7d28e42c1146c12a5d4e20c7cb55d3
+Merge: 4d441fb fd2c300
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 20 11:56:53 2017 -0500
+
+    Merge branch 'dev' of github.com:brianqvpham/cs373-idb into dev
+
+commit 4d441fba95803092ff62718f4342e36dfb4b19c9
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 20 11:56:41 2017 -0500
+
+    Cleaned up wishlist.py and populated select menus
+
+commit fd2c30099b7a972fa93b203333b3860ad31feb2e
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 10:45:21 2017 -0500
+
+    Search API endpoint
+
+commit 21b61fa09de08362a1105082b14c5d70c5158a78
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 01:57:33 2017 -0500
+
+    setting up dropdowns
+
+commit 0312affac6b900eff5f5f290324391f8d87f03bb
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 01:51:31 2017 -0500
+
+    delete un necessary stuff
+
+commit 6fba2f763da4e78574dc2a7b24a2a63cb163cbe8
+Merge: ec5d058 d68fc62
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 01:38:29 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit ec5d058a24dd8af83b20908ed94b4446ded1e388
+Author: paola jara <paolajar@cs.utexas.edu>
+Date:   Thu Apr 20 01:37:59 2017 -0500
+
+    setting up others group page
+
+commit d68fc62edcd282956d89a3f03ecaf6effee00858
+Merge: 702ab9b ebfd6b3
+Author: Jaime Munoz <jaimemun@cs.utexas.edu>
+Date:   Wed Apr 19 23:33:01 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 702ab9bbc5bf4d9c38c8000e1d1ceeaa638310d5
+Author: Jaime Munoz <jaimemun@cs.utexas.edu>
+Date:   Wed Apr 19 23:32:30 2017 -0500
+
+    Game retrieval and storage
+
+commit ebfd6b3c720f753d59dfadf2b22cf7361d5ebfce
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 22:25:40 2017 -0500
+
+    Search bar functionality
+
+commit fadef9260918b84ff9352e67ba271460f7a40a64
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 21:37:27 2017 -0500
+
+    change table background to white
+
+commit bfcbd82ad9cc41e984cd38d1014e43d5ef6ea10d
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 21:18:58 2017 -0500
+
+    make search bar longer
+
+commit 25ceeb03458fb8908dc0fe47647acc2080260840
+Merge: 0954ec9 8baa02e
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 21:13:03 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 0954ec921f7a5f7d3d3d19da137969954b2e0ef7
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 21:12:49 2017 -0500
+
+    added search bar
+
+commit 8baa02e2e086d275eb3d873f55bd93cc5bbbbc3e
+Author: Weston <wwselleck@gmail.com>
+Date:   Wed Apr 19 20:43:40 2017 -0500
+
+    Transferring API Description file from Apiary.io
+
+commit e630fd3856a32a3519df0f1d3b456460c53f902e
+Merge: b0975fe 872ddb2
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Wed Apr 19 20:26:32 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 872ddb257cbb5ee1466c559892365e07c69c22f3
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Apr 19 19:49:33 2017 -0500
+
+    Set up wishlist blueprint
+
+commit b8686abd0dc2051d618fb0c67f14f800b41e8b3c
+Merge: d19b097 68683c2
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 18 23:27:24 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit d19b0978dec4764bb9ec784897464c789f965a1d
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Tue Apr 18 23:27:14 2017 -0500
+
+    Search
+
+commit 68683c272081a6c1a3f5f9f6f962e63afa9dd910
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Mon Apr 17 19:44:35 2017 -0500
+
+    Fixed duplicate News links in about page.
+
+commit ec6b5da9d7bdb309f66f58f2d797e8684f9a0bb7
+Merge: 698af99 ade5e41
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 6 21:51:16 2017 -0500
+
+    Merge branch 'master' of github.com:brianqvpham/cs373-idb
+
+commit 698af99b4abb64577cd839cef71b6f9ea166a5c3
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 6 21:36:24 2017 -0500
+
+    fix background
+
+commit ade5e41f97e28ff7892641cc48ec1257b70b3113
+Merge: 4f79793 237fac0
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 21:34:01 2017 -0500
+
+    fixing font
+
+commit b0975fed76b480579767547089f3dc6edd10a585
+Merge: 64ac679 237fac0
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 6 21:28:58 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 237fac0cbc575b1647fe0dc22a468182af56d37d
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 21:26:39 2017 -0500
+
+    color dont
+
+commit 4f79793e051a62ccf15095f9a8dea6615eaf7e73
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 21:23:25 2017 -0500
+
+    changing font again
+
+commit 64ac6799626ceb934f1ed796411f02fa4be30b2b
+Merge: f46c598 8343932
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 6 21:17:43 2017 -0500
+
+    removed nohup.out
+
+commit f46c59860b7e40f33e53451e68d706cc6602846f
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 6 21:16:44 2017 -0500
+
+    merging
+
+commit 8343932ed775ef9908dca9bc98656869f93db3d6
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 21:11:23 2017 -0500
+
+    fixing font
+
+commit 6dedc3a1522f4b7e9d556603f30d53859c8334a1
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 6 20:54:30 2017 -0500
+
+    Updated about page stats.
+
+commit 3363567ef4196d7565936846846b70437db7eb15
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 6 20:42:22 2017 -0500
+
+    Made tests on about page run without redirecting.
+
+commit d02d3d963a19f258b1fcd312535a50eaf6fec71f
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 6 17:52:28 2017 -0500
+
+    Removed extra character on about page.
+
+commit a5808c0a8b55f05b997bbfeba6b17e24cd5d7290
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 17:43:37 2017 -0500
+
+    updating
+
+commit c8322fd8dbfea411197d7a29347924bae7d4e6d8
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 17:42:33 2017 -0500
+
+    changing font color
+
+commit f683229b94e68d70626e782bca5931364744c537
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 6 17:10:17 2017 -0500
+
+    unit tests popover
+
+commit e8e4c103f2a35801cb09df0529697b1b92db6091
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 6 15:56:36 2017 -0500
+
+    changed background
+
+commit 5364496641325358e5067cd0584fa50b23b0b450
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 6 12:09:36 2017 -0500
+
+    Fixed apiary documentation and removed extra files.
+
+commit 76c0beee7608a2d8864ee35d650ca1eb5379485a
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 6 11:50:24 2017 -0500
+
+    Added navbar to individual article/country/org page.
+
+commit 60ee855a22c66a8a5d7e4be8e4302f4c272a7c8d
+Author: Brian Pham <brianqvp@cs.utexas.edu>
+Date:   Thu Apr 6 11:20:41 2017 -0500
+
+    Fixed publish date not being displayed correctly and navbar issue on org page.
+
+commit 209be1022cb5219bc73108f8993d8a878909c7e8
+Author: Pikachu94 <paolajara@Paolas-MacBook-Pro.local>
+Date:   Thu Apr 6 01:58:42 2017 -0500
+
+    updating home page
+
+commit 4de11246c7df7926fd45f0fb7088c2c9a325f71b
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Wed Apr 5 21:32:33 2017 -0500
+
+    Updated models.html
+
 commit 78dafacb4d3c9c192b3a6c3efcb8c096b28f917c
 Author: Brian <brianqvpham@hotmail.com>
 Date:   Wed Apr 5 21:30:14 2017 -0500
