@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request, render_template, redirect
 
 
 def map_model(model):
@@ -30,4 +30,16 @@ def process_resource_list_page(Model, template):
     prev_url = '{0}?offset={1}'.format(
         current_path, max(args['offset'] - 10, 0))
     next_url = '{0}?offset={1}'.format(current_path, args['offset'] + 10)
+    one_url = '{0}'.format(current_path)
+
+
+   
+
+   
     return render_template(template, items=data, next_url=next_url, prev_url=prev_url)
+
+
+def process_number_list_page(page):
+
+
+

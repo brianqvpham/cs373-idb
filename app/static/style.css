@@ -8,6 +8,36 @@
 	width:3%;
 }*/
 
+
+.wishlist-background {
+    position: relative;
+    height: 100%;
+    background: url(../static/img/gamesbackground.jpg);
+    background-size: cover;
+    z-index: 1;
+}
+
+.wishlist-background h2 {
+        font-size: 22px;
+}
+
+
+.wishlist-background h2 {
+    color: #f8f8f8;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin: 0;
+}
+
+.wishlist-background p {
+    color: #f8f8f8;
+    letter-spacing: 4px;
+    font-size: 15px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
 table {
     font-family: arial, sans-serif;
     font-color: white;

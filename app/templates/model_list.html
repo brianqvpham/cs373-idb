@@ -14,7 +14,16 @@
       {% block tbody %}
       {% endblock %}
     </tbody>
+    
 </table>
-<a href={{prev_url}}> Prev </a>
-<a href={{next_url}}> Next </a>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href={{prev_url}}>Previous</a></li>
+    <li class="page-item"><a class="page-link" href={{one_url}}>1</a></li>
+
+    <li class="page-item"><a class="page-link" href={{next_url}}>Next</a></li>
+  </ul>
+</nav>
+
+
 {% endblock %}
