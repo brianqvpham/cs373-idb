@@ -4,8 +4,6 @@ from store import store
 search_bp = Blueprint('search', __name__,)
 
 def fill(data, baseURL):
-    ret = []
-    print(data)
     ands = [{
         **o,
         "link": "{}/{}".format(baseURL, o["id"]),
@@ -28,7 +26,7 @@ def search_route():
 
 
 def search(query=None):
-    words = query.split(',')
+    words = query.split(' ')
 
     organizations = store.OrganizationStore().search(words)
     organizations = fill(organizations, '/api/organizations')
