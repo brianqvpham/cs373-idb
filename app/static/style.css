@@ -9,6 +9,13 @@
 }*/
 
 
+.dropdown-content a:hover{background-color: #f1f1f1}
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+
+
 .wishlist-background {
     position: relative;
     height:100%;
