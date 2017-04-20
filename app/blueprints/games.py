@@ -24,3 +24,10 @@ def get_games():
     result["themes"].sort()
     result["ratings"].sort()
     return result
+
+def query_games(games, **kwargs):
+    result = games
+    for key in kwargs:
+        result = list(filter(lambda game: game[key] == kwargs[key], result))
+    return result
+    

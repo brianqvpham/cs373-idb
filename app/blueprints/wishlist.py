@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, jsonify, request
-from blueprints.games import get_games
+from blueprints.games import get_games, query_games
 
 wishlist_bp = Blueprint('wishlist', __name__)
 game_data = None
@@ -8,10 +8,11 @@ game_data = None
 def show_wishlist():
     global game_data
 
-    """
+    """ 
     # Initialize game data if neccessary
     if game_data == None:
-        game_data = get_games() """
+        game_data = get_games()
+    """
 
     # Using mock data since other group's website is down
     game_data = {}
