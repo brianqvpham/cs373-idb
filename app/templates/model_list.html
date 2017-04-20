@@ -1,6 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
 <h1 align="center">{{ header }}</h1>
+
+<div class="col-sm-6">
+    <div class="dataTables_length" id="example_length">
+      <label> 
+        <select name="example_length" aria-controls="example" class="form-control input-sm">
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+          <option value="100">100</option>
+        </select> 
+      </label>
+    </div>
+</div>
+
 <table class="table table-hover"  data-toggle="table" data-sort-name="name" data-sort-order="asc">
     <thead>
       <tr>
@@ -20,7 +34,6 @@
   <ul class="pagination justify-content-center">
     <li class="page-item"><a class="page-link" href={{prev_url}}>Previous</a></li>
     <li class="page-item"><a class="page-link" href={{one_url}}>1</a></li>
-
     <li class="page-item"><a class="page-link" href={{next_url}}>Next</a></li>
   </ul>
 </nav>
