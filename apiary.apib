@@ -169,3 +169,25 @@ specific countries or from certain news organizations.
         {
             "test_results": "............... ---------------------------------------------------------------------- Ran 15 tests in 0.082s OK"
         }
+        
+## Search [/api/search{?query}]
+
+### Search database [GET]
+
++ Parameters
+    + query (string) - Comma delimited string of words to query for
+
++ Response 200 (application/json)
+
+        {
+            "and": {
+                "articles": [...articles that matched all query words],
+                "countries": [...countries],
+                "organizations": [...organizations]
+            },
+            "or": {
+                "articles": [...articles that matched 1+ query words],
+                "countries": [...countries],
+                "organizations": [...organizations]
+            }
+        }
