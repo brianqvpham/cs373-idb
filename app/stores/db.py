@@ -30,8 +30,8 @@ class OrganizationStore(DBStore):
         return super().get(Organization, schema, id, **args)
 
     def search(self, words):
-        andf = and_(*[Organization.name.like('%{}%'.format(x)) for x in words])
-        orf = or_(*[Organization.name.like('%{}%'.format(x)) for x in words])
+        andf = and_(*[Organization.name.ilike('%{}%'.format(x)) for x in words])
+        orf = or_(*[Organization.name.ilike('%{}%'.format(x)) for x in words])
         return super().search(Organization, OrganizationSchema(many=True), andf, orf)
 
 class CountryStore(DBStore):
@@ -43,8 +43,8 @@ class CountryStore(DBStore):
         return super().get(Country, schema, id, **args)
 
     def search(self, words):
-        andf = and_(*[Country.name.like('%{}%'.format(x)) for x in words])
-        orf = or_(*[Country.name.like('%{}%'.format(x)) for x in words])
+        andf = and_(*[Country.name.ilike('%{}%'.format(x)) for x in words])
+        orf = or_(*[Country.name.ilike('%{}%'.format(x)) for x in words])
         return super().search(Country, CountrySchema(many=True), andf, orf)
 
 class ArticleStore(DBStore):
@@ -57,13 +57,13 @@ class ArticleStore(DBStore):
 
     def search(self, words):
         andf = or_(
-                    and_((*[Article.title.like('%{}%'.format(x)) for x in words])),
-                    and_((*[Article.description.like('%{}%'.format(x)) for x in words])),
+                    and_((*[Article.title.ilike('%{}%'.format(x)) for x in words])),
+                    and_((*[Article.description.ilike('%{}%'.format(x)) for x in words])),
                 )
 
         orf = or_(
-                    (*[Article.title.like('%{}%'.format(x)) for x in words]),
-                    (*[Article.description.like('%{}%'.format(x)) for x in words]),
+                    (*[Article.title.ilike('%{}%'.format(x)) for x in words]),
+                    (*[Article.description.ilike('%{}%'.format(x)) for x in words]),
                 )
         return super().search(Article, ArticleSchema(many=True), andf, orf)
 
