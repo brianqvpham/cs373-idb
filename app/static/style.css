@@ -19,26 +19,18 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+    background-color: white !important;
 }
 
-tr:nth-child(even) {
+/*tr:nth-child(even) {
     background-color: #dddddd;
-}
+}*/
 
 body {
   background-color: gray;
   font-family: 'Open Sans', sans-serif;
 
 }
-
-/*body{
-  background:url('http://www.wallpaperup.com/uploads/wallpapers/2012/08/30/12087/3574f899daef41d2f145eba13ff7840f.jpg');
-  background-size:100% 100%;
-  background-attachment: fixed;
-  background-repeat:no-repeat;
-  font-family: 'Open Sans', sans-serif;
-  padding-bottom: 40px;
-}*/
 
 .unit-tests-row {
 	padding-bottom: 10%;
@@ -266,10 +258,6 @@ footer p {
   color: white;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 .footer-bottom p {
   color: #6A7076;
   font-size: 1em;
@@ -298,12 +286,55 @@ footer p {
 }
 
 
-
-
-
-
 /* Section Dividers Backgrounds */
 
 .divider1 {
   background-image: url('')
 }
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Search Bar */
+
+#custom-search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+    #custom-search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+    }
+ 
+    #custom-search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }
