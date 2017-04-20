@@ -59,10 +59,6 @@ td, th {
     background-color: white !important;
 }
 
-/*tr:nth-child(even) {
-    background-color: #dddddd;
-}*/
-
 body {
   background-color: gray;
   font-family: 'Open Sans', sans-serif;
@@ -72,8 +68,6 @@ body {
 .unit-tests-row {
 	padding-bottom: 10%;
 }
-
-
 
 .about-team-member {
 	width: 25%;

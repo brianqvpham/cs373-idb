@@ -54,14 +54,22 @@
             {% if data.or.organizations %}
             <h2>Organizations</h2>
             <ul>
+              {% for org in data.and.organizations %}
+              <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
+              {% endfor %} <br>
+              Related Links: <br> <br>
               {% for org in data.or.organizations %}
               <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
-              {% endfor %}             
+              {% endfor %}         
             </ul>
             {% endif %}
             {% if data.or.articles %}
             <h2>Articles</h2>
             <ul>
+              {% for art in data.and.articles %}
+              <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
+              {% endfor %} <br>
+              Related Links: <br> <br>
               {% for art in data.or.articles %}
               <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
               {% endfor %}             
@@ -71,13 +79,17 @@
 
             <h2>Countries</h2>
             <ul>
-              {% for cunt in data.or.countries %}
-              <li><a href="{{cunt.url}}" style="color:white">{{cunt.name}}</a></li> 
+              {% for count in data.and.countries %}
+              <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
+              {% endfor %} <br>
+              Related Links: <br> <br>
+              {% for count in data.or.countries %}
+              <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
               {% endfor %}             
             </ul>
             {% endif %}
 
-            {% if query and not data.or.organizations and not data.or.articles and not data.or.countries%}
+            {% if query and not data.or.organizations and not data.or.articles and not data.or.countries and not data.and.organizations and not data.and.articles and not data.and.countries%}
             <h3><em>No results were found</em></h3>
             {% endif %}
             {% endif %}
