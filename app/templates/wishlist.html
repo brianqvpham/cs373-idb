@@ -5,49 +5,25 @@
 	    <meta charset="utf-8">
 			<meta name"viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	    <meta name="description" content="A  News Website">
-	    <title>About</title>
+	    <title>Wishlist</title>
 
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 			<link href="../static/style.css" rel="stylesheet">
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 			<script>
-		$(function() {
-		
-			
-			$("#data").change(function() {
-			
-				var $dropdown = $(this);
-			
-				$.getJSON("jsondata/data.json", function(data) {
-				
-					var key = $dropdown.val();
-					var vals = [];
-										
-					switch(key) {
-						case 'themes':
-							vals = data.beverages.split(",");
-							break;
-						case 'scores':
-							vals = data.snacks.split(",");
-							break;
-						case 'ratings':
-							vals = ['Please choose from above'];
-					}
-					
-					var $jsontwo = $("#json-two");
-					$jsontwo.empty();
-					$.each(vals, function(index, value) {
-						$jsontwo.append("<option>" + value + "</option>");
-					});
-			
-				});
-			});
+		      function GetSelectedItems(element1, element2)
+		      {
+		      	var e = document.getElementById(element1).selectedIndex;
+		      	var f = document.getElementById(element2).selectedIndex;
 
-		});
-	</script>
+		      	alert("value =" + document.getElementById(element1).value); 
+		      	alert("value2 =" + document.getElementById(element2).value);
+		      }
+		    </script>
 
 
 
@@ -71,59 +47,71 @@
 			  </div>
 			</nav>
 
-			
-	</body>
+	</body>		
+	
 
 			
-			<div class="wishlist-background">
-          
+			
+          	<div class="wishlist-background">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
                                     <p>Games Wishlist</p>
                                     <h2><span class="typing"></span></h2>
-                                    <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    Theme
-									  </button>
-									  <div class="dropdown-menu">
-                                        {% for theme in themes %}
-                                            <div>{{theme}}</div>
-									    {% endfor %}
-                                      </div>
-									</div>
-									<div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    Ratings
-									  </button>
-									  
-									  <div class="dropdown-menu">
-                                        {% for rating in ratings %}
-                                            <div>{{rating}}</div>
-                                        {% endfor %}
-									  </div>
-									</div>
                                     
+                                    <div>
+									  <select class="dropdown" id="theme_id">
+
+									  	<option>Themes</option>
+                                        {% for theme in themes %}
+                                           <option>
+                                            	{{theme}}
+                                           </option>
+									    {% endfor %}
+
+
+
+										
+                                      </select>
+									
+									
+									  
+									  <select class="dropdown" id="rating_id">
+									  <option>Ratings</option>
+                                        {% for rating in ratings %}
+                                            <option>{{rating}}</option>
+                                        {% endfor %}
+									  </select>
+									  <br>
+									  <br>
+									  <div id="results">
+
+									  	<a href="/wishlist/" class="btn btn-lg btn-default" onClick="GetSelectedItem('element1','element2');">Submit</a>
+									  
+									  </div>
+									
+                                    </div>d
                                 
                                 </div>
                             </div>
                         </div>
                     </div>
               
-        </div>
-         <div class="container">
+       
+			         <div class="container">
 
-              <h1>Wishlist</h1>
-              <hr>
-          </div>
-          <div class="container">
+			              <h1>Wishlist</h1>
+			              <hr>
+
+			          </div>
+			          <div class="container">
 
             
-          </div>
+          
 
 			
-
+		</div>
 			
 
 
@@ -147,4 +135,4 @@
 			</div>
 		</div>
 
- </html>
+</html>

@@ -8,45 +8,30 @@ game_data = None
 def show_wishlist():
     global game_data
 
-    """ 
     # Initialize game data if neccessary
     if game_data == None:
         game_data = get_games()
-    """
+    
 
+    # Parse args if exist
+    args = {}
+    for key in game_data:
+        # Try every criteria in game_data except for games 
+        if key != 'games':
+            cur_arg = request.args.get(key)
+            if cur_arg is not None:
+                args[key] = cur_arg
+
+    filtered_games = query_games(game_data, **args)
+    
+    
+    """
     # Using mock data since other group's website is down
     game_data = {}
-    game_data["themes"] = ["Action", "Adventure", "Roleplay", "Scifi"]
-    game_data["ratings"] = ["E", "M", "T"]
-    return render_template('wishlist.html', themes=game_data["themes"], ratings=game_data["ratings"])
+    game_data['themes'] = ['Action', 'Adventure', 'Roleplay', 'Scifi']
+    game_data['ratings'] = ['E', 'M', 'T']
+    """
 
-@wishlist_bp.route('/wishlist/<op_1>')
-def show_wishlist_result(op_1=None):
-   # TODO 
-
-    """ 
-        for g in game_d["games_list"]:
-            if g["theme"] not in games["themes"]:
-                games["themes"].append(g["theme"])
-            if g["avg_score"] not in games["rating"]:
-                # append score
-                games["rating"].append(g["avg_score"])
-            if g["theme"] not in theme_rating:
-                # games["theme_rating"] has the form of
-                # {"theme_a":
-                #      {"rating_1" : [{game_1}, {game_2},..],
-                #       "rating_2": []..}
-                #  "theme_b":
-                #      {"rating_3: [{game_3}] }
-                
-                theme_rating[g["theme"]] = {}
-                theme_rating[g["theme"]][g["avg_score"]] = [g]
-                
-            elif g["avg_score"] not in theme_rating[g["theme"]]:
-                theme_rating[g["theme"]][g["avg_score"]] = [g]
-            else:
-                theme_rating[g["theme"]][g["avg_score"]].append(g)
-        for t in theme_rating:
-            print(t + "\n")
-            for s in theme_rating[t]:
-                print("score: " + s + "\n") """
+    return render_template('wishlist.html', themes=game_data['themes'], 
+                           ratings=game_data['ratings'],
+                           fil_games=filtered_games)

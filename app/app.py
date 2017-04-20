@@ -23,6 +23,14 @@ def index():
     data = {}
     if query is not None:
         data = search(query)
+        if 'and' in data:
+            for i in range(len(data['and']['articles'])):
+                data['and']['articles'][i]['url'] = data['and']['articles'][i]['link'][4:]
+            for i in range(len(data['and']['organizations'])):
+                data['and']['organizations'][i]['url'] = data['and']['organizations'][i]['link'][4:]
+            for i in range(len(data['and']['countries'])):
+                data['and']['countries'][i]['url'] = data['and']['countries'][i]['link'][4:]
+
         if 'or' in data:
             for i in range(len(data['or']['articles'])):
                 data['or']['articles'][i]['url'] = data['or']['articles'][i]['link'][4:]
