@@ -50,26 +50,3 @@ def search(query=None):
             }
         }
 
-def and_f(attr, fields):
-    for field in fields:
-        if all(word in o[field] for word in words):
-            return True
-    return False
-
-def get_and_results(words, data, *fields):
-    def f(o):
-        for field in fields:
-            if all(word in o[field] for word in words):
-                return True
-        return False
-    return list(filter(f, data))
-
-def get_or_results(words, data, *fields):
-    def f(o):
-        for field in fields:
-            if any(word in o[field] for word in words):
-                return True
-        return False
-    return list(filter(f, data))
-
-
