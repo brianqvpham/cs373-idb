@@ -70,43 +70,41 @@
 			  </div>
 			</nav>
 
-			
-	</body>
+	</body>		
+	
 
 			
-			<div class="wishlist-background">
-          
+			
+          	<div class="wishlist-background">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
                                     <p>Games Wishlist</p>
                                     <h2><span class="typing"></span></h2>
-                                    <div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
-									    Theme
-									  </button>
-									  <div class="dropdown-menu">
-									  	
+                                    
+									  <select class="dropdown">
+									  	<option>Themes</option>
                                         {% for theme in themes %}
-                                           <div>
+                                           <option>
                                             	{{theme}}
-                                           </div>
+                                           </option>
 									    {% endfor %}
+
+
+
 										
-                                      </div>
-									</div>
-									<div class="btn-group">
-									  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-									    Ratings
-									  </button>
+                                      </select>
+									
+									
 									  
-									  <select class="dropdown-menu">
+									  <select class="dropdown">
+									  <option>Ratings</option>
                                         {% for rating in ratings %}
                                             <option>{{rating}}</option>
                                         {% endfor %}
 									  </select>
-									</div>
+									
                                     
                                 
                                 </div>
@@ -114,19 +112,19 @@
                         </div>
                     </div>
               
-        </div>
-         <div class="container">
+       
+			         <div class="container">
 
-              <h1>Wishlist</h1>
-              <hr>
-          </div>
-          <div class="container">
+			              <h1>Wishlist</h1>
+			              <hr>
+			          </div>
+			          <div class="container">
 
             
-          </div>
+          
 
 			
-
+		</div>
 			
 
 
