@@ -8,8 +8,8 @@ from blueprints.organizations import organizations_bp
 from blueprints.countries import countries_bp
 from blueprints.static_data import static_data
 from blueprints.search import search_bp
-from blueprints.wishlist import wishlist_bp
 from blueprints.search import search
+from blueprints.wishlist import wishlist_bp
 
 import os
 import subprocess

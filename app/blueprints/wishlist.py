@@ -1,22 +1,29 @@
-#from flask import Blueprint, render_template, jsonify, request
-from game_data import get_games
+from flask import Blueprint, render_template, jsonify, request
+from blueprints.games import get_games
 
-#wishlist_bp = Blueprint('wishlist', __name__)
-game_d = None
-games = {}
-theme_rating = {}
+wishlist_bp = Blueprint('wishlist', __name__)
+game_data = None
 
-#@wishlist_bp.route('/wishlist/', methods=['GET'])
-def show_selection():
-    global game_d
-    global games 
-    global theme_rating
-    # name a template
-    
-    if game_d == None:
-        game_d = get_games()
-        games["themes"] = []
-        games["rating"] = []
+@wishlist_bp.route('/wishlist/')
+def show_wishlist():
+    global game_data
+
+    """
+    # Initialize game data if neccessary
+    if game_data == None:
+        game_data = get_games() """
+
+    # Using mock data since other group's website is down
+    game_data = {}
+    game_data["themes"] = ["Action", "Adventure", "Roleplay", "Scifi"]
+    game_data["ratings"] = ["E", "M", "T"]
+    return render_template('wishlist.html', themes=game_data["themes"])#, game_data["ratings"])
+
+@wishlist_bp.route('/wishlist/<op_1>')
+def show_wishlist_result(op_1=None):
+   # TODO 
+
+    """ 
         for g in game_d["games_list"]:
             if g["theme"] not in games["themes"]:
                 games["themes"].append(g["theme"])
@@ -41,8 +48,4 @@ def show_selection():
         for t in theme_rating:
             print(t + "\n")
             for s in theme_rating[t]:
-                print("score: " + s + "\n")
-
-
-show_selection()
-        
+                print("score: " + s + "\n") """
