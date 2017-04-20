@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, jsonify
+from flask import Flask, Blueprint, render_template, jsonify, request
 from flask_marshmallow import Marshmallow
 from models import db, ma
 from sqlalchemy import create_engine
@@ -9,6 +9,7 @@ from blueprints.countries import countries_bp
 from blueprints.static_data import static_data
 from blueprints.search import search_bp
 from blueprints.wishlist import wishlist_bp
+from blueprints.search import search
 
 import os
 import subprocess
@@ -18,8 +19,21 @@ blueprint = Blueprint('blueprint', __name__)
 
 @blueprint.route('/')
 def index():
+    query = request.args.get('query')
     data = {}
-    return render_template('home.html', **data)
+    if query is not None:
+        data = search(query)
+        if 'or' in data:
+            for i in range(len(data['or']['articles'])):
+                data['or']['articles'][i]['url'] = data['or']['articles'][i]['link'][4:]
+            for i in range(len(data['or']['organizations'])):
+                data['or']['organizations'][i]['url'] = data['or']['organizations'][i]['link'][4:]
+            for i in range(len(data['or']['countries'])):
+                data['or']['countries'][i]['url'] = data['or']['countries'][i]['link'][4:]
+    else:
+        query = ''
+
+    return render_template('home.html', data=data, query=query)
 
 
 @blueprint.route('/about/')

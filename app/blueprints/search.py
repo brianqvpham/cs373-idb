@@ -20,9 +20,10 @@ def fill(data, baseURL):
             "or": ors
             }
 
-@search_bp.route('/search')
-def search():
-    words = request.args.get('query', '').split(',')
+# @search_bp.route('/search')
+def search(query):
+    # words = request.args.get('query', '').split(',')
+    words = query.split(',')
 
     organizations = store.OrganizationStore().search(words)
     organizations = fill(organizations, '/api/organizations')
@@ -31,7 +32,7 @@ def search():
     countries = store.CountryStore().search(words)
     countries = fill(countries, '/api/countries')
 
-    return jsonify({
+    return {
         "and": {
             "organizations": organizations["and"],
             "articles": articles["and"],
@@ -42,7 +43,7 @@ def search():
             "articles": articles["or"],
             "countries": countries["or"]
             }
-        })
+        }
 
 def and_f(attr, fields):
     for field in fields:
