@@ -1,3 +1,212 @@
+commit 8be7792f69407b40db52d46e88f26b85b5bc3d01
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 20:30:10 2017 -0500
+
+    laksjdflaksdjflaksdjflaksdjflaksdjflkasjdflkajd
+
+commit 17aa69a473460d1eec0e527f6aaa79132cdfaba3
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 20:28:08 2017 -0500
+
+    hmmmasdfmasdlfdsfkljdjkl
+
+commit aef550805653617711b25950a9b13dfde2cabf2d
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 20:20:47 2017 -0500
+
+    remove thingy ma jiggy
+
+commit 9d91bdcb51e07be8089b6203a3070df697fa6b12
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 20:18:57 2017 -0500
+
+    Show all search results
+
+commit 9686f2164e6219fa436e638353f215bec7643742
+Merge: 8b85167 19835e7
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 20:16:17 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 8b8516748ee5ac2422485753330315a59d82458c
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 20:16:10 2017 -0500
+
+    clean up search
+
+commit 19835e72fecb4a7574137d9b49923893d1d226c0
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 20:13:54 2017 -0500
+
+    Whitespace stuffffffffalskdjfalksdjflkj
+
+commit 0f1a9097433e0d26720f30f57f80cf2890a61f12
+Merge: 1120218 bd4549f
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 20:09:42 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 1120218a6cffc231ef60de48fd4d6e6df858153b
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 20:09:32 2017 -0500
+
+    The Duck
+
+commit bd4549f6f8ce65ba9c84a46eb54cff9453bf9a4e
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 20:02:29 2017 -0500
+
+    Fixed game name in table to not be hyperlink
+
+commit 095cfeb15a8a524c8f4fbdf677a8b3cba3aed729
+Merge: d960790 9f7ecb6
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:58:33 2017 -0500
+
+    Merge branch 'dev' of github.com:brianqvpham/cs373-idb into dev
+
+commit d960790046e63542dfb2619592bfdfd945f5920c
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:58:23 2017 -0500
+
+    Fixed querying of game data
+
+commit 9f7ecb60ee4b390e3093bfbbc28a4aff46a2c3ef
+Merge: 34fe244 1d6720f
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:57:51 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 34fe2441116b3394884be27bee3c6d63c4edbbbc
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:57:43 2017 -0500
+
+    explicitly differ between AND and OR
+
+commit 1d6720f91b3dda9c34dc33484477df2c34950e19
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:49:42 2017 -0500
+
+    Fixed templating in wishlist.html
+
+commit a12d9351a42ba8dfb5af653306bd80bbe72d71fc
+Merge: e4da9a7 ca4f6a2
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 19:44:33 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit e4da9a73bcd66244404234e598eda9701ad9f1a2
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 19:44:24 2017 -0500
+
+    adding data to table
+
+commit ca4f6a265123b22e917ab248277f8df1da00676c
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:36:41 2017 -0500
+
+    Fixed querying of game data
+
+commit 07f767d334c20ab5307eaf307982c522ae068bca
+Merge: fe4365f ab797c3
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 19:31:35 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit fe4365fe5dfcbaf9c94d8bfd9a514bd0ac66a044
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 19:31:28 2017 -0500
+
+    Page stuff
+
+commit ab797c3b2990589e9272077942a2a8144094559c
+Merge: 713a988 200f388
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 19:30:42 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit 713a988b9a868672a7915e1250e8dbe1f7c6188b
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 19:30:35 2017 -0500
+
+    table for new page
+
+commit 200f3887a1bb30b74ca7529a1e9486a9eecb8fbf
+Merge: 2370b5b 19e564e
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:27:39 2017 -0500
+
+    Wishlist progress
+
+commit 2370b5bcbc5ccc30a8dc9bcc03ec7dbfa875f091
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 19:25:02 2017 -0500
+
+    Setup retrieval of select menu fields
+
+commit 19e564e56fc53485126c192007a7515c24fba42a
+Merge: e95dc6c 718f385
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:18:20 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit e95dc6c556d0cdfe1326013d2f497f7fb6f540ea
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:18:11 2017 -0500
+
+    Search logic between and/or
+
+commit 718f38556f24eb0166e3a05a859ad44471e17b80
+Author: pikachu94 <paolajara22@utexas.edu>
+Date:   Thu Apr 20 19:09:47 2017 -0500
+
+    set up table
+
+commit 9de8540d32871d7a6062b5174afeea041d0b1bb0
+Merge: dbb058c 58cb7cf
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:08:11 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit dbb058c71f6364f9746cfc71421bdb908efceb0c
+Author: Nikita Zamwar <nikitazamwar@utexas.edu>
+Date:   Thu Apr 20 19:08:04 2017 -0500
+
+    Page numbers
+
+commit 58cb7cf5cc3cba6f522c20e09940b5ef60d0c29f
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 18:48:25 2017 -0500
+
+    search thigns
+
+commit 221d9fc72e5ccf663d0988b7eff81ae992025ba3
+Merge: b687864 1db0148
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 18:36:09 2017 -0500
+
+    Merge branch 'dev' of https://github.com/brianqvpham/cs373-idb into dev
+
+commit b6878641456311868045ff5ec0893cae595a86e1
+Author: Weston Selleck <wwselleck@gmail.com>
+Date:   Thu Apr 20 18:36:05 2017 -0500
+
+    No duplicates in search
+
+commit 1db01489e35cbe4f91fb6e46618e7d0b5ac4fec1
+Author: Brian <brianqvpham@hotmail.com>
+Date:   Thu Apr 20 18:25:22 2017 -0500
+
+    Added code to parse args in show_wishlist
+
 commit cb5349a0b3cd7f8e664922db7db849a18ee58741
 Author: pikachu94 <paolajara22@utexas.edu>
 Date:   Thu Apr 20 18:24:12 2017 -0500
