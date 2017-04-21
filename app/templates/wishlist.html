@@ -14,18 +14,6 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-			<script>
-		      function GetSelectedItems(element1, element2)
-		      {
-		      	var e = document.getElementById(element1).selectedIndex;
-		      	var f = document.getElementById(element2).selectedIndex;
-
-		      	alert("value =" + document.getElementById(element1).value); 
-		      	alert("value2 =" + document.getElementById(element2).value);
-		      }
-		    </script>
-
-
 
 
 	  </head>
@@ -58,10 +46,12 @@
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
                                     <p>Games Wishlist</p>
-                                    <h2><span class="typing"></span></h2>
+                                    
                                     
                                     <div>
-									  <select class="dropdown" id="theme_id">
+                                    <form action="/wishlist/">
+
+									  <select class="dropdown" name="theme_id">
 
 									  	<option>Themes</option>
                                         {% for theme in themes %}
@@ -74,6 +64,8 @@
 
 										
                                       </select>
+                                  
+
 									
 									
 									  
@@ -85,13 +77,14 @@
 									  </select>
 									  <br>
 									  <br>
-									  <div id="results">
-
-									  	<a href="/wishlist/" class="btn btn-lg btn-default" onClick="GetSelectedItem('element1','element2');">Submit</a>
 									  
-									  </div>
+
+									  	<a href="/wishlist/" class="btn btn-lg btn-default">Submit</a>
+									  
+									 
+								 	</form>
 									
-                                    </div>d
+                                    </div>
                                 
                                 </div>
                             </div>
@@ -99,16 +92,25 @@
                     </div>
               
        
-			         <div class="container">
-
-			              <h1>Wishlist</h1>
-			              <hr>
-
-			          </div>
+			         
 			          <div class="container">
 
+					  <div class="bs-example">
+					    <table class="table table-bordered">
+					        <thead>
+					            <tr>
+					                <
+					                <th>Game</th>
+					                <th>Theme</th>
+					                <th>Rating</th>
+					            </tr>
+					        </thead>
+					        
+					    </table>
+					</div>
+
             
-          
+          </div>
 
 			
 		</div>
