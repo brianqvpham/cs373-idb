@@ -54,48 +54,54 @@
             {% if data.and.organizations or data.or.organizations %}
             <h2>Organizations</h2>
             <ul>
+            {% if data.and.organizations %}
               AND results: <br>
               {% for org in data.and.organizations %}
               <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
               {% endfor %} <br>
-              {% if data.or.organizations %}
-                Related Links(OR results): <br> <br>
-                {% for org in data.or.organizations %}
-                <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
-                {% endfor %}  
-              {% endif %}
+            {% endif %}
+            {% if data.or.organizations %}
+              Related Links(OR results): <br> <br>
+              {% for org in data.or.organizations %}
+              <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
+              {% endfor %}  
+            {% endif %}
             </ul>
             {% endif %}
 
             {% if data.and.articles or data.or.articles %}
             <h2>Articles</h2>
             <ul>
+            {% if data.and.articles %}
               AND results: <br>
               {% for art in data.and.articles %}
               <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
               {% endfor %} <br>
-              {% if data.or.articles %}
-                Related Links(OR results): <br> <br>
-                {% for art in data.or.articles %}
-                <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
-                {% endfor %}  
-              {% endif %}
+            {% endif %}
+            {% if data.or.articles %}
+              Related Links(OR results): <br> <br>
+              {% for art in data.or.articles %}
+              <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
+              {% endfor %}  
+            {% endif %}
             </ul>
             {% endif %}
 
             {% if data.and.countries or data.or.countries%}
             <h2>Countries</h2>
             <ul>
+            {% if data.and.countries %}
               AND results: <br>
               {% for count in data.and.countries %}
               <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
               {% endfor %} <br>
-              {% if data.or.countries %}
-                Related Links(OR results): <br> <br>
-                {% for count in data.or.countries %}
-                <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
-                {% endfor %} 
-              {% endif %}
+            {% endif %}
+            {% if data.or.countries %}
+              Related Links(OR results): <br> <br>
+              {% for count in data.or.countries %}
+              <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
+              {% endfor %} 
+            {% endif %}
             </ul>
             {% endif %}
 
