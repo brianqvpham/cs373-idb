@@ -3,7 +3,7 @@ import json
 
 def get_games():
     # Get data from API request
-    source = "http://gamelookup.me/api/games/"
+    source = 'http://gamelookup.me/api/games/'
     req = urllib.request.Request(source)
     response = urllib.request.urlopen(req)
     string = response.read().decode('utf-8')
@@ -11,18 +11,18 @@ def get_games():
 
     # Parse data and make lists of themes and ratings
     result = {}
-    result["games"] = json_obj["games_list"]
-    result["themes"] = []
-    result["ratings"] = []
-    for game in json_obj["games_list"]:
-        if game["theme"] not in result["themes"]:
-            result["themes"].append(game["theme"])
+    result['games'] = json_obj['games_list']
+    result['themes'] = []
+    result['ratings'] = []
+    for game in json_obj['games_list']:
+        if game['theme'] not in result['themes']:
+            result['themes'].append(game['theme'])
 
-        if game["avg_score"] not in result["ratings"]:
-            result["ratings"].append(game["avg_score"])
+        if game['avg_score'] not in result['ratings']:
+            result['ratings'].append(game['avg_score'])
 
-    result["themes"].sort()
-    result["ratings"].sort()
+    result['themes'].sort()
+    result['ratings'].sort()
     return result
 
 def query_games(games, **kwargs):
