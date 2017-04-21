@@ -9,10 +9,10 @@ class DBStore():
         else:
             resource = Model.query.all()
             schema = Schema(many=True)
-            offset = int(args.get('offset', 0))
-#            resource = resource[offset:offset+10]
-            limit = int(args.get('limit', 10))
-            resource = resource[offset:offset+limit]
+            page = args.get('page')
+            limit = args.get('limit')
+            first = page * limit
+            resource = resource[first:first+limit]
         return schema.dump(resource).data
 
     def search(self, Model, schema, andf, orf):
