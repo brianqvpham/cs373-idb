@@ -57,15 +57,16 @@
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
+                                    <form action="/wishlist/">
                                     <p>Games Wishlist</p>
                                     <h2><span class="typing"></span></h2>
                                     
                                     <div>
-									  <select class="dropdown" id="theme_id">
+									  <select class="dropdown" id="theme_id" name="theme">
 
 									  	<option>Themes</option>
                                         {% for theme in themes %}
-                                           <option>
+                                           <option value="{{theme}}">
                                             	{{theme}}
                                            </option>
 									    {% endfor %}
@@ -77,21 +78,21 @@
 									
 									
 									  
-									  <select class="dropdown" id="rating_id">
+									  <select class="dropdown" id="rating_id" name="avg_score">
 									  <option>Ratings</option>
                                         {% for rating in ratings %}
-                                            <option>{{rating}}</option>
+                                            <option value="{{rating}}">{{rating}}</option>
                                         {% endfor %}
 									  </select>
 									  <br>
 									  <br>
 									  <div id="results">
 
-									  	<a href="/wishlist/" class="btn btn-lg btn-default" onClick="GetSelectedItem('element1','element2');">Submit</a>
+									  	<button class="btn btn-lg btn-default" type="submit">Submit</a>
 									  
 									  </div>
-									
-                                    </div>d
+								    </form>	
+                                    </div>
                                 
                                 </div>
                             </div>
