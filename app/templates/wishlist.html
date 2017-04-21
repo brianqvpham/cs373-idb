@@ -14,18 +14,6 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-			<script>
-		      function GetSelectedItems(element1, element2)
-		      {
-		      	var e = document.getElementById(element1).selectedIndex;
-		      	var f = document.getElementById(element2).selectedIndex;
-
-		      	alert("value =" + document.getElementById(element1).value); 
-		      	alert("value2 =" + document.getElementById(element2).value);
-		      }
-		    </script>
-
-
 
 
 	  </head>
@@ -57,15 +45,18 @@
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
+                                    <form action="/wishlist/">
                                     <p>Games Wishlist</p>
-                                    <h2><span class="typing"></span></h2>
+                                    
                                     
                                     <div>
-									  <select class="dropdown" id="theme_id">
+									  <select class="dropdown" id="theme_id" name="theme">
+                                    <form action="/wishlist/">
+
 
 									  	<option>Themes</option>
                                         {% for theme in themes %}
-                                           <option>
+                                           <option value="{{theme}}">
                                             	{{theme}}
                                            </option>
 									    {% endfor %}
@@ -74,24 +65,26 @@
 
 										
                                       </select>
+                                  
+
 									
 									
 									  
-									  <select class="dropdown" id="rating_id">
+									  <select class="dropdown" id="rating_id" name="avg_score">
 									  <option>Ratings</option>
                                         {% for rating in ratings %}
-                                            <option>{{rating}}</option>
+                                            <option value="{{rating}}">{{rating}}</option>
                                         {% endfor %}
 									  </select>
 									  <br>
 									  <br>
-									  <div id="results">
+									  
 
-									  	<a href="/wishlist/" class="btn btn-lg btn-default" onClick="GetSelectedItem('element1','element2');">Submit</a>
+									  	<button class="btn btn-lg btn-default" type="submit">Submit</a>
 									  
 									  </div>
-									
-                                    </div>d
+								    </form>	
+                                    </div>
                                 
                                 </div>
                             </div>
@@ -99,16 +92,25 @@
                     </div>
               
        
-			         <div class="container">
-
-			              <h1>Wishlist</h1>
-			              <hr>
-
-			          </div>
+			         
 			          <div class="container">
 
+					  <div class="bs-example">
+					    <table class="table table-bordered">
+					        <tr>
+					            
+					            <td>{{item.name}}</td>
+					            <td>{{item.theme}}</td>
+					            <td>{{item.avg_score}}</td>
+					            <td>{{item.year}}</td>
+
+					            
+					        </tr> 
+					    </table>
+					</div>
+
             
-          
+          </div>
 
 			
 		</div>
