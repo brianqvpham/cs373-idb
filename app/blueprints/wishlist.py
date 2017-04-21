@@ -20,9 +20,10 @@ def show_wishlist():
     if theme is not None:
         args['theme'] = theme
     if rating is not None:
-        args['rating'] = rating
+        args['avg_score'] = rating
     
-    filtered_games = query_games(game_data['games'], theme=theme, avg_score=rating)
+    filtered_games = query_games(game_data['games'], **args)#theme=theme, avg_score=rating)
+    print(filtered_games)
     
     """
     # Using mock data since other group's website is down
