@@ -4,13 +4,13 @@
 
 <div class="col-sm-6">
     <div class="dataTables_length" id="example_length">
-      <label> 
+      <label>
         <select name="example_length" aria-controls="example" class="form-control input-sm">
           <option value="10">10</option>
           <option value="25">25</option>
           <option value="50">50</option>
           <option value="100">100</option>
-        </select> 
+        </select>
       </label>
     </div>
 </div>
@@ -28,7 +28,7 @@
       {% block tbody %}
       {% endblock %}
     </tbody>
-    
+
 </table>
 <!-- <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
@@ -45,30 +45,12 @@
       <li class="paginate_button previous disabled" id="example_previous">
         <a href={{prev_url}} aria-controls="example" data-dt-idx="0" tabindex="0">Previous</a>
       </li>
-      <li class="paginate_button active">
-        <a href="#" aria-controls="example" data-dt-idx="1" tabindex="0">1</a>
-      </li>
+      {% for page in page_links%}
+          <li class="paginate_button {{page.className}}">
+              <a href="{{page.link}}" aria-controls="example" data-dt-idx="{{page.num}}" tabindex="0">{{page.num}}</a>
+          </li>
+      {% endfor %}
 
-      <li class="paginate_button ">
-        <a href="#" aria-controls="example" data-dt-idx="2" tabindex="0">2</a>
-      </li>
-
-      <li class="paginate_button ">
-        <a href="#" aria-controls="example" data-dt-idx="3" tabindex="0">3</a>
-      </li>
-
-      <li class="paginate_button ">
-        <a href="#" aria-controls="example" data-dt-idx="4" tabindex="0">4</a>
-      </li>
-
-      <li class="paginate_button ">
-        <a href="#" aria-controls="example" data-dt-idx="5" tabindex="0">5</a>
-      </li>
-
-      <li class="paginate_button ">
-        <a href="#" aria-controls="example" data-dt-idx="6" tabindex="0">6</a>
-      </li>
-      
       <li class="paginate_button next" id="example_next">
         <a href={{next_url}} aria-controls="example" data-dt-idx="7" tabindex="0">Next</a>
       </li>

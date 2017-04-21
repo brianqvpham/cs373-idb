@@ -24,18 +24,23 @@ def process_resource_page(id, Model, template):
 
 def process_resource_list_page(Model, template):
     args = request.args.to_dict()
-    args['offset'] = int(args.get('offset', 0))
+    args['page'] = int(args.get('page', 0))
+    args['limit'] = int(args.get('limit', 10))
     data = Model.get(None, **args)
     current_path = request.path
-    prev_url = '{0}?offset={1}'.format(
-        current_path, max(args['offset'] - 10, 0))
-    next_url = '{0}?offset={1}'.format(current_path, args['offset'] + 10)
-   
-
-   
-
-   
-    return render_template(template, items=data, next_url=next_url, prev_url=prev_url)
+    prev_url = '{0}?page={1}&limit={2}'.format(
+        current_path, max(args['page'] - 1, 0), args['limit'])
+    next_url = '{0}?page={1}&limit={2}'.format(current_path, args['page'] + 1, args['limit'])
+    page = args['page']
+    pages = range(max(page - 2, 0), page+3)
+    page_links = []
+    for n in pages:
+        page_links.append({
+            "num": n + 1,
+            "link": '{0}?page={1}&limit={2}'.format(current_path, n, args['limit']),
+            "className": 'active' if n == page else ''
+            })
+    return render_template(template, items=data, next_url=next_url, prev_url=prev_url, page_links=page_links)
 
 
 
