@@ -16,9 +16,9 @@ class DBStore():
         return schema.dump(resource).data
 
     def search(self, Model, schema, andf, orf):
-        ands = schema.dump(Model.query.filter(andf).limit(10).all()).data
+        ands = schema.dump(Model.query.filter(andf).all()).data
         andIds = [x["id"] for x in ands]
-        ors = schema.dump(Model.query.filter(orf).limit(10).all()).data
+        ors = schema.dump(Model.query.filter(orf).all()).data
         ors = [x for x in ors if x["id"] not in andIds]
         return {
             "and": ands,
