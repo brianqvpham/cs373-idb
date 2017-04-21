@@ -45,17 +45,18 @@
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <div class="header-text">
+                                    <form action="/wishlist/">
                                     <p>Games Wishlist</p>
                                     
                                     
                                     <div>
+									  <select class="dropdown" id="theme_id" name="theme">
                                     <form action="/wishlist/">
 
-									  <select class="dropdown" name="theme_id">
 
 									  	<option>Themes</option>
                                         {% for theme in themes %}
-                                           <option>
+                                           <option value="{{theme}}">
                                             	{{theme}}
                                            </option>
 									    {% endfor %}
@@ -69,21 +70,20 @@
 									
 									
 									  
-									  <select class="dropdown" id="rating_id">
+									  <select class="dropdown" id="rating_id" name="avg_score">
 									  <option>Ratings</option>
                                         {% for rating in ratings %}
-                                            <option>{{rating}}</option>
+                                            <option value="{{rating}}">{{rating}}</option>
                                         {% endfor %}
 									  </select>
 									  <br>
 									  <br>
 									  
 
-									  	<a href="/wishlist/" class="btn btn-lg btn-default">Submit</a>
+									  	<button class="btn btn-lg btn-default" type="submit">Submit</a>
 									  
-									 
-								 	</form>
-									
+									  </div>
+								    </form>	
                                     </div>
                                 
                                 </div>
