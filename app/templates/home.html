@@ -50,42 +50,49 @@
                 </div>
               <br>
 
-            {% if data.or %}
-            {% if data.or.organizations %}
+            {% if data.and %}
+            {% if data.and.organizations %}
             <h2>Organizations</h2>
             <ul>
               {% for org in data.and.organizations %}
               <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
               {% endfor %} <br>
-              Related Links: <br> <br>
-              {% for org in data.or.organizations %}
-              <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
-              {% endfor %}         
+              {% if data.or.organizations %}
+                Related Links: <br> <br>
+                {% for org in data.or.organizations %}
+                <li><a href="{{org.url}}" style="color:white">{{org.name}}</a></li> 
+                {% endfor %}  
+              {% endif %}
             </ul>
             {% endif %}
-            {% if data.or.articles %}
+
+            {% if data.and.articles %}
             <h2>Articles</h2>
             <ul>
               {% for art in data.and.articles %}
               <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
               {% endfor %} <br>
-              Related Links: <br> <br>
-              {% for art in data.or.articles %}
-              <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
-              {% endfor %}             
+              {% if data.or.articles %}
+                Related Links: <br> <br>
+                {% for art in data.or.articles %}
+                <li><a href="{{art.url}}" style="color:white">{{art.title}}</a></li> 
+                {% endfor %}  
+              {% endif %}
             </ul>
             {% endif %}
-            {% if data.or.countries %}
 
+            {% if data.and.countries %}
             <h2>Countries</h2>
             <ul>
               {% for count in data.and.countries %}
               <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
               {% endfor %} <br>
-              Related Links: <br> <br>
-              {% for count in data.or.countries %}
-              <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
-              {% endfor %}             
+              {% if data.or.countries %}
+                Related Links: <br> <br>
+                {% for count in data.or.countries %}
+                <li><a href="{{count.url}}" style="color:white">{{count.name}}</a></li> 
+                {% endfor %} 
+              {% endif %}
             </ul>
             {% endif %}
 
