@@ -47,7 +47,7 @@
 	                                    
 	                                    
 	                                    
-										  <select class="dropdown" id="theme_id" name="theme">
+										  <select class="dropdown" id="theme_id" name="theme" value="{{theme}}">
 	                                     
 
 
@@ -64,7 +64,7 @@
 										
 										
 										  
-										  <select class="dropdown" id="rating_id" name="avg_score">
+										  <select class="dropdown" id="rating_id" name="avg_score" value="{{avg_score}}">
 										  <option>Ratings</option>
 	                                        {% for rating in ratings %}
 	                                            <option value="{{rating}}">{{rating}}</option>
@@ -92,18 +92,19 @@
 		                <th>Theme</th>
 		                <th>Rating</th>
 		                <th>Year</th>
-			   
+			            <th>Publisher</th> 
 			            
 			        
 			      </tr>
 			    </thead>
 			    <tbody>
-				{% for item in items %}
+				{% for item in fil_games %}
 			    	<tr>
 			        <td><a href="">{{item.name}}</a></td>
 			        <td>{{item.theme}}</td>
 			        <td>{{item.avg_score}}</td>
 			        <td>{{item.year}}</td>
+                    <td>{{item.publisher}}</td>
 			       
    					 </tr>
    				{% endfor %}
