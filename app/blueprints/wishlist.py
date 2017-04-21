@@ -17,13 +17,14 @@ def show_wishlist():
     args = {}
     theme = request.args.get('theme')
     rating = request.args.get('avg_score')
-    if theme is not None:
+    if theme is not None and theme != 'Themes':
         args['theme'] = theme
-    if rating is not None:
+    if rating is not None and rating != 'Ratings':
         args['avg_score'] = rating
     
     filtered_games = query_games(game_data['games'], **args)#theme=theme, avg_score=rating)
-    
+    if theme == 'Themes' and rating == 'Ratings':
+        filtered_games = []
     """
     # Using mock data since other group's website is down
     game_data = {}
