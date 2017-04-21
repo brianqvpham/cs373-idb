@@ -26,7 +26,8 @@ def search_route():
 
 
 def search(query=None):
-    words = query.split(' ')
+    words = query.strip().split(' ')
+    print(words)
 
     organizations = store.OrganizationStore().search(words)
     organizations = fill(organizations, '/api/organizations')
