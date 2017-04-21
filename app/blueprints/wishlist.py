@@ -15,15 +15,14 @@ def show_wishlist():
 
     # Parse args if exist
     args = {}
-    for key in game_data:
-        # Try every criteria in game_data except for games 
-        if key != 'games':
-            cur_arg = request.args.get(key)
-            if cur_arg is not None:
-                args[key] = cur_arg
-
-    filtered_games = query_games(game_data, **args)
+    theme = request.args.get('theme')
+    rating = request.args.get('avg_score')
+    if theme is not None:
+        args['theme'] = theme
+    if rating is not None:
+        args['avg_score'] = rating
     
+    filtered_games = query_games(game_data['games'], **args)#theme=theme, avg_score=rating)
     
     """
     # Using mock data since other group's website is down
@@ -34,4 +33,6 @@ def show_wishlist():
 
     return render_template('wishlist.html', themes=game_data['themes'], 
                            ratings=game_data['ratings'],
-                           fil_games=filtered_games)
+                           fil_games=filtered_games,
+                           theme=theme,
+                           avg_score=rating)
