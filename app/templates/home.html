@@ -51,7 +51,7 @@
               <br>
 
             {% if data.and %}
-            {% if data.and.organizations %}
+            {% if data.and.organizations or data.or.organizations %}
             <h2>Organizations</h2>
             <ul>
               AND results: <br>
@@ -67,7 +67,7 @@
             </ul>
             {% endif %}
 
-            {% if data.and.articles %}
+            {% if data.and.articles or data.or.articles %}
             <h2>Articles</h2>
             <ul>
               AND results: <br>
@@ -83,7 +83,7 @@
             </ul>
             {% endif %}
 
-            {% if data.and.countries %}
+            {% if data.and.countries or data.or.countries%}
             <h2>Countries</h2>
             <ul>
               AND results: <br>
@@ -99,7 +99,7 @@
             </ul>
             {% endif %}
 
-            {% if query and not data.or.organizations and not data.or.articles and not data.or.countries and not data.and.organizations and not data.and.articles and not data.and.countries%}
+            {% if query and not data.or.organizations and not data.or.articles and not data.or.countries and not data.and.organizations and not data.and.articles and not data.and.countries %}
             <h3><em>No results were found</em></h3>
             {% endif %}
             {% endif %}
